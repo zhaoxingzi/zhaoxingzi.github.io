@@ -3,18 +3,40 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/9 | zxz&amp;&amp;hsm</title>
+  <title>offsetHeight、clientHeight、scrollHeight | zxz&amp;&amp;hsm</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zxz&&hsm">
-<meta property="og:url" content="http://yoursite.com/archives/2016/09/index.html">
+  <meta name="description" content="###今天简单介绍介绍一下元素视窗单位
+
+scrollHeight: 获取对象的滚动高度。 
+scrollLeft:元素的横向滚动条移动的距离 可以读取 可以修改
+scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 可以读取 可以修改
+scrollWidth:获取对象的滚动宽度 
+offsetHeight:获取对象相对于版面或由父坐标，如果内容没有超出,相当于clien">
+<meta property="og:type" content="article">
+<meta property="og:title" content="offsetHeight、clientHeight、scrollHeight">
+<meta property="og:url" content="http://yoursite.com/2016/10/08/offsetHeight、clientHeight、scrollHeight/index.html">
 <meta property="og:site_name" content="zxz&&hsm">
+<meta property="og:description" content="###今天简单介绍介绍一下元素视窗单位
+
+scrollHeight: 获取对象的滚动高度。 
+scrollLeft:元素的横向滚动条移动的距离 可以读取 可以修改
+scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 可以读取 可以修改
+scrollWidth:获取对象的滚动宽度 
+offsetHeight:获取对象相对于版面或由父坐标，如果内容没有超出,相当于clien">
+<meta property="og:updated_time" content="2016-11-12T08:02:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zxz&&hsm">
+<meta name="twitter:title" content="offsetHeight、clientHeight、scrollHeight">
+<meta name="twitter:description" content="###今天简单介绍介绍一下元素视窗单位
+
+scrollHeight: 获取对象的滚动高度。 
+scrollLeft:元素的横向滚动条移动的距离 可以读取 可以修改
+scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 可以读取 可以修改
+scrollWidth:获取对象的滚动宽度 
+offsetHeight:获取对象相对于版面或由父坐标，如果内容没有超出,相当于clien">
   
     <link rel="alternative" href="/atom.xml" title="zxz&amp;&amp;hsm" type="application/atom+xml">
   
@@ -203,53 +225,130 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-offsetHeight、clientHeight、scrollHeight" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/30/hello-world/" class="archive-article-date">
-  	<time datetime="2016-09-30T01:21:14.000Z" itemprop="datePublished">9月 30</time>
+    <div class="article-meta">
+      <a href="/2016/10/08/offsetHeight、clientHeight、scrollHeight/" class="article-date">
+  	<time datetime="2016-10-08T06:47:55.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/30/hello-world/">
-        Hello World
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
-      </a>
+  
+    <h1 class="article-title" itemprop="name">
+      offsetHeight、clientHeight、scrollHeight
+      
     </h1>
   
 
-        <div class="article-info info-on-left">
-          
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
 
-          
-        </div>
+        
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###今天简单介绍介绍一下元素视窗单位</p>
+<ul>
+<li>scrollHeight: 获取对象的滚动高度。 </li>
+<li>scrollLeft:元素的横向滚动条移动的距离 可以读取 可以修改</li>
+<li>scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 可以读取 可以修改</li>
+<li>scrollWidth:获取对象的滚动宽度 </li>
+<li>offsetHeight:获取对象相对于版面或由父坐标，如果内容没有超出,相当于clientHeight</li>
+<li>offsetParent 属性指定的父坐标的高度 </li>
+<li>offsetLeft:返回元素与offsetParent的横向距离，找到元素的左偏移量，偏移量的参考对象是offsetParent的值</li>
+<li>offsetParent: 返回距离元素最近设置position，非static样式的元素节点，没有的话，返回body节点。可以读取,可以修改</li>
+<li>offsetTop 属性指定的父坐标的计算顶端位置 </li>
+<li>innerWidth ：浏览器窗口宽度 (只读)</li>
+<li>innerHeight ：浏览器窗口高度 (只读)</li>
+<li>offsetWidth : 等于 width + padding + border (只读)</li>
+<li>offsetHeight :等于 height + padding + border (只读)</li>
+<li>clientWidth : 等于 width + padding (只读)</li>
+<li>clientHeight : 等于 height + padding (只读)</li>
+</ul>
+<ul>
+<li>event.clientX 相对文档的水平座标 </li>
+<li>event.clientY 相对文档的垂直座标 </li>
+<li>event.offsetX 相对容器的水平坐标 </li>
+<li>event.offsetY 相对容器的垂直坐标 </li>
+<li>document.documentElement.scrollTop 垂直方向滚动的值 </li>
+<li><p>event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量</p>
+</li>
+<li><p>页可见区域宽： document.body.clientWidth;</p>
+</li>
+<li>网页可见区域高： document.body.clientHeight;</li>
+<li>网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</li>
+<li>网页可见区域高： document.body.offsetHeight （包含边线的宽）;</li>
+<li>网页正文全文宽： document.body.scrollWidth;</li>
+<li>网页正文全文高： document.body.scrollHeight;</li>
+<li>网页被卷去的高： document.body.scrollTop;</li>
+<li>网页被卷去的左： document.body.scrollLeft;</li>
+<li>网页正文项目组上： window.screenTop;</li>
+<li>网页正文项目组左： window.screenLeft;</li>
+<li>屏幕辨别率的高： window.screen.height;</li>
+<li>屏幕辨别率的宽： window.screen.width;</li>
+<li>屏幕可用工作区高度： window.screen.availHeight;</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/12/基于nodeJs的登录注册/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          基于nodeJs的登录注册
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -275,8 +374,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
