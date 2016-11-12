@@ -44,7 +44,7 @@
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Nancy</a></h1>
+		  <h1 class="header-author"><a href="/">KiKi</a></h1>
 		</hgroup>
 
 		
@@ -69,6 +69,11 @@
 						</div>
 						
 						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
 					</div>
 					
 				</div>
@@ -81,6 +86,8 @@
 						<li>友情链接</li>
 						
 						
+						<li>关于我</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -92,7 +99,7 @@
 					<nav class="header-menu">
 						<ul>
 						
-							<li><a href="/">主页</a></li>
+							<li><a href="/index.html">主页</a></li>
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
@@ -129,10 +136,18 @@
 					
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://lidaolin.github.io">ldl</a>
 			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zhoushujuan.github.io">周书娟</a>
+			        
 			        </div>
 				</section>
 				
 
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更想zh</div>
+				</section>
 				
 			</div>
 		</div>
@@ -143,7 +158,7 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Nancy</h1>
+  		<h1 class="header-author js-mobile-header hide">KiKi</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -151,7 +166,7 @@
 				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author">Nancy</h1>
+			  <h1 class="header-author">KiKi</h1>
 			</hgroup>
 			
 			<p class="header-subtitle">你在桥上看风景，看风景的人在桥下看你！！！</p>
@@ -159,7 +174,7 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="/">主页</a></li>
+					<li><a href="/index.html">主页</a></li>
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
@@ -185,6 +200,61 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-wc" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/12/wc/" class="article-date">
+  	<time datetime="2016-11-12T05:58:34.000Z" itemprop="datePublished">2016-11-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/12/wc/">
+        wc
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##wc</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-基于nodeJs的登录注册" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -215,35 +285,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="nodeJs分为三种模块"><a href="#nodeJs分为三种模块" class="headerlink" title="nodeJs分为三种模块"></a>nodeJs分为三种模块</h1><ul>
-<li>核心模块</li>
-<li>第三方模块</li>
-<li>自定义模块</li>
-</ul>
-<p><code>核心模块：</code>是被编译成二进制代码，引用的时候只需require表示符即可</p>
-<h1 id="这个demo主要用得到nodeJs中以下核心模块"><a href="#这个demo主要用得到nodeJs中以下核心模块" class="headerlink" title="这个demo主要用得到nodeJs中以下核心模块"></a>这个demo主要用得到nodeJs中以下核心模块</h1><ul>
-<li>fs 文件管理<ul>
-<li>写入文件内容 : fs.writeFile(‘test.txt’, ‘Hello Node’ , [encoding], [callback]);</li>
-<li>文件是否存在 : fs.exists(‘test.txt’,[callback]);</li>
-<li>读取文件内容 : fs.readFile(‘test.txt’, [encoding], [callback]);</li>
-<li>写入文件 : fs.writeFile(filename, data,[encoding],[callback(err)]);</li>
-</ul>
-</li>
-<li>url 文件管理</li>
-<li>Query String 字符串转换</li>
-<li>http HTTP<ul>
-<li>创建HTTP服务器 : http.createServer([requestListener]) </li>
-</ul>
-</li>
-</ul>
-<p>由于没有服务器，所以不能上传demo的实际效果。    </p>
-<h2 id="server-js"><a href="#server-js" class="headerlink" title="server.js"></a>server.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</div><div class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">"url"</span>);</div><div class="line"><span class="keyword">var</span> querystring = <span class="built_in">require</span>(<span class="string">"querystring"</span>)</div><div class="line"><span class="comment">//创建服务器</span></div><div class="line"><span class="keyword">var</span> server = http.createServer(handle).listen(<span class="number">3000</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">    <span class="comment">//文件路径</span></div><div class="line">    <span class="keyword">var</span> filePath = <span class="string">""</span>;</div><div class="line">    <span class="keyword">if</span>(req.url == <span class="string">"/"</span>)&#123;</div><div class="line">        filePath = <span class="string">"./public/html/index.html"</span></div><div class="line">        <span class="comment">//文件是否存在</span></div><div class="line">        fs.exists(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">exists</span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(exists)&#123;</div><div class="line">                fs.readFile(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(err)&#123;</div><div class="line">                        <span class="keyword">return</span>;</div><div class="line">                    &#125;</div><div class="line">                    res.end(data);</div><div class="line">                &#125;)</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                send404(res);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.url.indexOf(<span class="string">"/form"</span>) != <span class="number">-1</span> )&#123;</div><div class="line">        <span class="keyword">if</span>(req.method == <span class="string">"GET"</span>)&#123;</div><div class="line">            <span class="keyword">var</span> parme = url.parse(req.url,<span class="literal">true</span>);</div><div class="line">            <span class="keyword">var</span> info = parme.query;</div><div class="line">            <span class="keyword">var</span> username = info.username;</div><div class="line">            <span class="keyword">var</span> password = info.password;</div><div class="line">            <span class="keyword">var</span> email = info.email;</div><div class="line">            <span class="keyword">var</span> tell = info.tell;</div><div class="line"></div><div class="line">            fs.readFile(<span class="string">"./tsconfig.json"</span>,<span class="string">"utf-8"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">                <span class="keyword">if</span>(err)&#123;</div><div class="line">                    <span class="keyword">return</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(data);</div><div class="line">                <span class="keyword">var</span> users = data.users;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;users.length;i++)&#123;</div><div class="line">                    <span class="keyword">if</span>(users[i].username  == username &amp;&amp; users[i].password == password &amp;&amp; users[i].email == email &amp;&amp; users[i].tell == tell)&#123;</div><div class="line">                        <span class="comment">//有此账户</span></div><div class="line">                        filePath = <span class="string">"./public/html/login.html"</span></div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        filePath = <span class="string">"./public/html/reg.html"</span></div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                fs.exists(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">exists</span>)</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(exists)&#123;</div><div class="line">                        fs.readFile(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">                            <span class="keyword">if</span>(err)&#123;</div><div class="line">                                <span class="keyword">return</span>;</div><div class="line">                            &#125;</div><div class="line">                            res.end(data);</div><div class="line">                        &#125;)</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        send404(res);</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line"></div><div class="line">            &#125;)</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(req.method == <span class="string">"POST"</span>)&#123;</div><div class="line"></div><div class="line">            <span class="keyword">var</span> postDate = <span class="string">""</span>;</div><div class="line"></div><div class="line">            req.on(<span class="string">"data"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>)</span>&#123;</div><div class="line">                postDate += chunk;</div><div class="line">            &#125;)</div><div class="line">            req.on(<span class="string">"end"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">                <span class="keyword">var</span> data = querystring.parse(postDate);</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">                <span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">                obj.username = data.username;</div><div class="line">                obj.password = data.password;</div><div class="line">                obj.email = data.email;</div><div class="line">                obj.tell = data.tell;</div><div class="line">                fs.readFile(<span class="string">"./tsconfig.json"</span>,<span class="string">"utf-8"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line"></div><div class="line">                    <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(data);</div><div class="line">                    data.users.push(obj)</div><div class="line">                    fs.writeFile(<span class="string">"./tsconfig.json"</span>,<span class="built_in">JSON</span>.stringify(data),<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">                    &#125;)</div><div class="line">                &#125;)</div><div class="line">            &#125;)</div><div class="line"></div><div class="line">            fs.exists(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">exists</span>)</span>&#123;</div><div class="line">                <span class="keyword">if</span>(exists)&#123;</div><div class="line">                    fs.readFile(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">                        <span class="keyword">if</span>(err)&#123;</div><div class="line">                            <span class="keyword">return</span>;</div><div class="line">                        &#125;</div><div class="line">                        res.end(data);</div><div class="line">                    &#125;)</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    send404(res);</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        filePath = <span class="string">"./public"</span> + req.url;</div><div class="line">        fs.exists(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">exists</span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(exists)&#123;</div><div class="line">                fs.readFile(filePath,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(err)&#123;</div><div class="line">                        <span class="keyword">return</span>;</div><div class="line">                    &#125;</div><div class="line">                    res.end(data);</div><div class="line">                &#125;)</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                send404(res);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">send404</span>(<span class="params">res</span>)</span>&#123;</div><div class="line">    fs.readFile(<span class="string">"./public/html/404.html"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(err)&#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">        res.end(data);</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="string">"success"</span>:<span class="string">"1"</span>,<span class="string">"users"</span>:[</div><div class="line">	&#123;</div><div class="line">	<span class="string">"username"</span>:<span class="string">"zxz"</span>,</div><div class="line">	<span class="string">"password"</span>:<span class="string">"123"</span>,</div><div class="line">	<span class="string">"email"</span>:<span class="string">"2300816093@qq.com"</span>,</div><div class="line">	<span class="string">"tell"</span>:<span class="string">"18711111111"</span></div><div class="line">	&#125;,&#123;</div><div class="line">	<span class="string">"username"</span>:<span class="string">"hsm"</span>,</div><div class="line">	<span class="string">"password"</span>:<span class="string">"520"</span>,</div><div class="line">	<span class="string">"email"</span>:<span class="string">"123456789@qq.com"</span>,</div><div class="line">	<span class="string">"tell"</span>:<span class="string">"1555755895"</span></div><div class="line">	&#125;,&#123;</div><div class="line">	<span class="string">"username"</span>:<span class="string">"ldl"</span>,</div><div class="line">	<span class="string">"password"</span>:<span class="string">"222"</span>,</div><div class="line">	<span class="string">"email"</span>:<span class="string">"678901@qq.com"</span>,</div><div class="line">	<span class="string">"tell"</span>:<span class="string">"13031031087"</span></div><div class="line">&#125;]&#125;</div></pre></td></tr></table></figure>
-<h2 id="public-css-index-css"><a href="#public-css-index-css" class="headerlink" title="public/css/index.css"></a>public/css/index.css</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    background:#f5f5f5;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">    width:400px;</div><div class="line">    height:500px;</div><div class="line">    position:relative;</div><div class="line">    margin:0 auto;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div><div class="line">img&#123;</div><div class="line">    width:100%;</div><div class="line">    height:100%;</div><div class="line">&#125;</div><div class="line">h2&#123;</div><div class="line">    height:35px;</div><div class="line">    margin:0;</div><div class="line">    text-align:center;</div><div class="line"> &#125;</div><div class="line">form&#123;</div><div class="line">    width:100%;</div><div class="line">    height:100%;</div><div class="line">    position:absolute;</div><div class="line">    top:0;</div><div class="line">    left:0;</div><div class="line">    background:rgba(0,24,255,0.3);</div><div class="line">&#125;</div><div class="line">label&#123;</div><div class="line">    margin-left:50px;</div><div class="line">    color:snow;</div><div class="line">&#125;</div><div class="line">input&#123;</div><div class="line">    width:300px;</div><div class="line">    height:40px;</div><div class="line">    outline:none;</div><div class="line">    background:transparent;</div><div class="line">    border-radius:10px;</div><div class="line">    margin:15px 50px;</div><div class="line">    color:#fff;</div><div class="line">&#125;</div><div class="line">.login&#123;</div><div class="line">    width:100px;</div><div class="line">    height:40px;</div><div class="line">    font-size:20px;</div><div class="line">    color:#fff;</div><div class="line">    margin:20px 150px;</div><div class="line">&#125;</div><div class="line">.oneinput,.two&#123;</div><div class="line">    -webkit-animation:zx 0.6s linear;</div><div class="line">&#125;</div><div class="line">.twoinput,.four&#123;</div><div class="line">    -webkit-animation:zxz 0.7s linear;</div><div class="line">&#125;</div><div class="line">.threeinput,.one&#123;</div><div class="line">    -webkit-animation:z 0.8s linear;</div><div class="line">&#125;</div><div class="line">.fourinput,.three&#123;</div><div class="line">    -webkit-animation:hsm 0.9s linear;</div><div class="line">&#125;</div><div class="line">.login&#123;</div><div class="line">    -webkit-animation:sm 1.3s linear;</div><div class="line">&#125;</div><div class="line">.log&#123;</div><div class="line">    -webkit-animation:h 1s linear;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes zx&#123;</div><div class="line">    from&#123;transform:translateX(-350px) translateY(-50px) rotateZ(45deg);&#125;</div><div class="line">    to&#123;transform:translateX(0px) translateY(0px);&#125;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes zxz&#123;</div><div class="line">    from&#123;transform:translateX(550px) translateY(-60px) rotateZ(45deg);&#125;</div><div class="line">    to&#123;transform:translateX(0px) translateY(0px);&#125;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes z&#123;</div><div class="line">    from&#123;transform:translateX(-350px) translateY(-20px) rotateZ(45deg);&#125;</div><div class="line">    to&#123;transform:translateX(0px) translateY(0px);&#125;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes hsm&#123;</div><div class="line">    from&#123;transform:translateX(550px) translateY(-50px) rotateZ(45deg);&#125;</div><div class="line">    to&#123;transform:translateX(0px) translateY(0px);&#125;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes sm&#123;</div><div class="line">    from&#123;transform:translateX(0px) translateY(500px);&#125;</div><div class="line">    to&#123;transform:translateX(0px) translateY(0px);&#125;</div><div class="line">&#125;</div><div class="line">@-webkit-keyframes h&#123;</div><div class="line">    from&#123;transform:rotateY(0deg);&#125;</div><div class="line">    to&#123;transform:rotateY(180deg);&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="public-html-index-html"><a href="#public-html-index-html" class="headerlink" title="public/html/index.html"></a>public/html/index.html</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en"&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset="UTF-8"&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;link rel="stylesheet" href="../css/index.css"&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">   &lt;div class="box"&gt;</div><div class="line">       &lt;img src="../image/thumb.jpg" width="400" height="500"&gt;</div><div class="line">       &lt;form action="/form" method="get" class="log"&gt;</div><div class="line">           &lt;h2&gt;&lt;/h2&gt;</div><div class="line">           &lt;label class="one"&gt;Name:&lt;/label&gt;</div><div class="line">           &lt;input type="text" placeholder="username" name="username" class="oneinput" required/&gt;</div><div class="line"></div><div class="line">           &lt;label class="two"&gt;Password:&lt;/label&gt;</div><div class="line">           &lt;input type="password" placeholder="password" name="password" class="twoinput" required/&gt;</div><div class="line"></div><div class="line">           &lt;label class="three"&gt;Email:&lt;/label&gt;</div><div class="line">           &lt;input type="text" placeholder="email" name="email"  class="threeinput" required/&gt;</div><div class="line"></div><div class="line">           &lt;label class="four"&gt;Tell:&lt;/label&gt;</div><div class="line">           &lt;input type="text" placeholder="tell" name="tell" class="fourinput" required/&gt;</div><div class="line"></div><div class="line">           &lt;input type="submit" value="登录" class="login"/&gt;</div><div class="line"></div><div class="line">       &lt;/form&gt;</div><div class="line">   &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h2 id="public-html-login-html"><a href="#public-html-login-html" class="headerlink" title="public/html/login.html"></a>public/html/login.html</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en"&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset="UTF-8"&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;h2&gt;登录成功&lt;/h2&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h2 id="public-html-reg-html"><a href="#public-html-reg-html" class="headerlink" title="public/html/reg.html"></a>public/html/reg.html</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en"&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset="UTF-8"&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;link rel="stylesheet" href="../css/index.css"&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class="box"&gt;</div><div class="line">    &lt;img src="../image/thumb.jpg" width="400" height="500"&gt;</div><div class="line">    &lt;form action="/form" method="post" class="log"&gt;</div><div class="line">        &lt;h2&gt;你未注册&lt;/h2&gt;</div><div class="line">        &lt;label class="one"&gt;Name:&lt;/label&gt;</div><div class="line">        &lt;input type="text" placeholder="username" name="username" class="oneinput" required/&gt;</div><div class="line"></div><div class="line">        &lt;label class="two"&gt;Password:&lt;/label&gt;</div><div class="line">        &lt;input type="password" placeholder="password" name="password" class="twoinput" required/&gt;</div><div class="line"></div><div class="line">        &lt;label class="three"&gt;Email:&lt;/label&gt;</div><div class="line">        &lt;input type="text" placeholder="email" name="email"  class="threeinput" required/&gt;</div><div class="line"></div><div class="line">        &lt;label class="four"&gt;Tell:&lt;/label&gt;</div><div class="line">        &lt;input type="text" placeholder="tell" name="tell" class="fourinput" required/&gt;</div><div class="line"></div><div class="line">        &lt;input type="submit" value="注册" class="login"/&gt;</div><div class="line"></div><div class="line">    &lt;/form&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-
+        <h1 id="nodeJs分为三种模块"><a href="#nodeJs分为三种模块" class="headerlink" title="nodeJs分为三种模块"></a>nodeJs分为三种模块</h1><p>+
       
     </div>
     
@@ -255,6 +297,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2016/11/12/基于nodeJs的登录注册/#more">more >></a>
+        </p>
       
     
   </div>
@@ -392,7 +438,7 @@
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2016 Nancy
+        &copy; 2016 KiKi
       </div>
         <div class="footer-right">
           <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
