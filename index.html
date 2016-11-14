@@ -292,35 +292,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什么是语义化？"><a href="#什么是语义化？" class="headerlink" title="什么是语义化？"></a>什么是语义化？</h1><pre><code>为什么我们提倡书写语义化的代码？
-</code></pre><p>① 语义化的代码，结构清晰，具有良好的可读性，利于维护。</p>
-<pre><code>试想一下，当你回顾几个月前甚至是几年前写的代码，如果结构混乱，那重新梳理的过程是十分麻烦，效率十分低下的；当你接手别人写的代码、阅读别人写的代码的时候，如果他的代码没有很好的按照语义化的标准，那么，面对这一大片由各种字符组合成的、编译器识别良好的代码，在你的眼里，就不是那么容易的梳理了，浪费时间、效率低下。
-
-语义化的代码，不仅机器能够识别，对人也友好，不仅能够方便代码的阅读，对代码的后期维护也有很大帮助，更容易维护，提高效率。
-</code></pre><p>② 对搜索引擎友好，利于搜索引擎的抓取。</p>
-<pre><code>语义化的代码，可以让搜索小蜘蛛遇到你的时候，能快速的识别出你的网页是什么类型、什么方向的内容，网页的结构、内容由什么组成，小蜘蛛能够更容易的爬到你的网页上。
-</code></pre><p>③ 更容易让一些特殊设备识别、利于特殊终端的阅读。</p>
-<pre><code>语义化很好的代码，不仅可以在浏览器里很好的显示，也可以被一些阅读器识别，比如说有的人视力模糊、甚至是看不见，这样，他肯定是要让阅读器读给他听，而当我们在网页的某个位置放了一张图片，如果我们给这个img标签加一个alt属性，alt=“这是什么什么的图片”，这样，就算是那些眼睛看不到、看不清楚的人群，但也能够通过语音阅读设备知道这里是一张图片，并且知道图片表达的是什么内容。
-</code></pre><p>怎样书写语义化的代码、遵循语义化标准？<br>① 了解标签属性的语义；</p>
-<pre><code>尽量用有结构含义的，少用无语义的，如 &lt;span&gt;，&lt;div&gt; 无意义，看不出是什么东西，可是&lt;address&gt;一看就知道这里面的是地址，&lt;em&gt;标签一看就知道这个是强调的内容，区分于普通内容。
-</code></pre><p>② 统一规范；</p>
-<p>③ 样式留给css；</p>
-<p>④ 手写，避免使用生成工具；</p>
-<p>⑤ 命名遵循行业标准(微格式 •hcard/vcard 间隔符•h-product 下划线 驼峰命名)</p>
-<p>一些语义化标签<br>① article标签装载显示一个独立的文章内容。例如一篇完整的论坛帖子，一则网站新闻，一篇博客文章等等，一个用户评论等等。 artilce可以嵌套，则内层的artilce对外层的article标签有隶属的关系。例如，一个博客文章，可以用article显示，然后一些评论可以以article的形式嵌入其中。</p>
-<p>② section 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</p>
-<p>③ aside 用来装载非正文类的内容。例如广告，成组的链接，侧边栏等等。</p>
-<p>④ hgroup 标签用于对网页或区段的标题元素（h1-h6）进行组合。例如，在一个区段中你有连续的h系列的标签元素，则可以用hgroup将他们括起来。</p>
-<p>⑤ header 标签定义文档的页面组合，通常是一些引导和导航信息。</p>
-<p>⑥ footer 标签定义 section 或 document 的页脚。在典型情况下，该元素会包含创作者的姓名、文档的创作日期以及/或者联系信息。</p>
-<p>⑦ nav 标签定义显示导航链接不是所有的成组的超级链接都需要放在nav标签里。nav标签里应该放入一些当前页面的主要导航链接。 例如在页脚显示一个站点的导航链接（如首页，服务信息页面，版权信息页面等等），就可以使用nav标签，当然，这不是必须的。</p>
-<p>⑧ time 标签定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。该元素能够以机器可读的方式对日期和时间进行编码，这样， 举例说，用户代理能够把生日提醒或排定的事件添加到用户日程表中，搜索引擎也能够生成更智能的搜索结果。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;我们在每天早上 &lt;time&gt;9:00&lt;/time&gt; 开始营业。&lt;/p&gt; </div><div class="line">&lt;p&gt;我在 &lt;time datetime=<span class="string">"2008-02-14"</span>&gt;情人节&lt;/time&gt; 有个约会。&lt;/p&gt;</div></pre></td></tr></table></figure></p>
-<p>⑨ mark 标签定义带有记号的文本。请在需要突出显示文本时使用 <mark> 标签。</mark></p>
-<p>⑩ figure标签规定独立的流内容（图像、图表、照片、代码等等）。figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。</p>
-<p>⑪ figcaption 标签定义 figure 元素的标题（caption）。”figcaption” 元素应该被置于 “figure” 元素的第一个或最后一个子元素的位置。</p>
-<p>⑫ contextmenu 添加到系统右键菜单</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文链接：http://www.cnblogs.com/xsilence/p/6050468.html</div></pre></td></tr></table></figure>
-
+        <h1 id="什么是语义化？"><a href="#什么是语义化？" class="headerlink" title="什么是语义化？"></a>什么是语义化？</h1><p>+
       
     </div>
     
@@ -332,6 +304,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2016/10/14/浅谈语义化/#more">more >></a>
+        </p>
       
     
   </div>
