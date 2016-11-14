@@ -110,7 +110,7 @@
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="https://zhaoxingzi.github.io/" title="github">github</a>
+								<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
 					        
 								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
 					        
@@ -188,7 +188,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://zhaoxingzi.github.io/" title="github">github</a>
+						<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
 			        
@@ -204,6 +204,88 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-line-height，vertical-align及图片居中对齐问题根源解析" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/14/line-height，vertical-align及图片居中对齐问题根源解析/" class="article-date">
+  	<time datetime="2016-11-14T13:15:54.000Z" itemprop="datePublished">2016-11-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/14/line-height，vertical-align及图片居中对齐问题根源解析/">
+        line-height，vertical-align及图片居中对齐问题根源解析
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于图片居中对齐的问题，进入前端行业虽然有一段时间了，以为自己懂了，可是实际上还是一知半解，找了一些博客来看了一下，但是感觉讲的有点碎，看完还是一知半解。</p>
+<p>查阅了一下《css权威指南》，结合遇到的问题，这才了解到前前后后的问题根源。</p>
+<p>主要的问题如下：</p>
+<p>1.line-height是个什么东西，范围在哪里，具体应用于什么元素？</p>
+<p>2.vertiacal-align和line-height有什么关系，元素对齐到底是一个什么样的过程。</p>
+<p>3.图片对齐和文本对齐有什么区别？</p>
+<p>4.浮动元素为什么对齐会出现问题？</p>
+<p>——-》解答这些问题，牵涉的碎片化知识：</p>
+<p>基线，底端，行内框，行框，行间距，替换元素及非替换元素，对齐</p>
+<p>下面围绕着上面的三个问题，以及相应的碎片化知识点来进行解析问题。</p>
+<p>一般来说，之所以不了解vertical-align，是因为不清楚对齐后面的这些碎片化知识，而这些也是很多博客在解析的时候常常忽略的地方。</p>
+<p>先说结论：</p>
+<p>1.line-height是行高，主要作用是在文本上下行间距，基于文本产生影响文本元素位置的作用，对于行内元素的位置影响显著，但是对于块元素的影响甚微。</p>
+<p>2.vertical-align和line-height的关系是：line-height是vertical-align的对齐依据。vertical-align主要是影响行内元素的对齐，不影响块元素布局。</p>
+<p>而决定行内元素对齐的有两个因素，1.元素本身的height（类似于图片和按钮等替换元素）2.还有其他span、em非替换元素的line-height。行框通过计算height，line-height，来将各个行内元素与行内的基线进行对齐。</p>
+<p>但是当产生浮动的时候，浮动会对行内元素的布局产生特殊影响，因此不会按照原先的方式来进行对齐，此时设置了vertical-align往往没有效果。</p>
+<p>3.图片的对齐是将自己的底端，也就是图片的最下端与行框的默认基线进行对齐，对齐依据是底端。影响图片对齐的依据是图片的height、padding、border大小。</p>
+<p>而文本元素，例如<span>文本内容</span>，则是将自身的行内框基线与行框基线进行对齐，对齐依据是基线。影响行内文本元素的依据是line-height，以及元素自身的font属性。</p>
+<p>4.元素浮动之后实际上是从正常的文档流中除去了（因此会出现高度塌陷，父容器收缩的问题），但是同时又对文档产生着影响（最经典的就是环绕效果）。元素浮动类似于一个被除名的黑户，虽然不在土地登记簿上，但是的的确确占用一块地方，因此别的元素也不能因此占据浮动元素的空间，但是因为是黑户，所以别的元素会环绕它，好像它不存在一样。</p>
+<p>元素浮动之后，会尽力往容器的左右两侧移动，尽可能地“漂”到容器的最高处。</p>
+<p>因此此时行内元素浮动之后，浮动的规则会覆盖vertical-align的规则，这个时候设置vertical-align往往会出现问题，最典型的就是对一个段落中的图片进行浮动，然后设置vertical-align，但是发现往往不起作用。</p>
+<p>但是文本元素浮动之后往往不会受到影响，因为line-height实际上还是作用于文本元素的，虽然文本元素的容器位置“漂”到其他位置，但是里面的文本因为line-height，仍然有行高，可以影响到行内元素的布局。</p>
+<hr>
+<p> ————————————————我是分割线—————————————————————————————</p>
+<hr>
+<p>结论如何推导出来</p>
+<p>看完这些结论，想必很多人也是一时之间有些不明白所以然，因为不同的人掌握的背景知识是不同的，而这些结论的关键恰恰是这些关键性的碎片化知识，它们起到了穿针引线的作用。下面来梳理一下，到底是怎么得出结论的。</p>
+<p><img src="https://github.com/img/z.png"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-基于nodeJs的登录注册" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -382,8 +464,8 @@
     <article id="post-First-——-博客初体验" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/09/30/First-——-博客初体验/" class="article-date">
-  	<time datetime="2016-09-30T08:28:27.000Z" itemprop="datePublished">2016-09-30</time>
+      <a href="/2016/06/01/First-——-博客初体验/" class="article-date">
+  	<time datetime="2016-06-01T08:28:27.000Z" itemprop="datePublished">2016-06-01</time>
 </a>
     </div>
   
@@ -396,7 +478,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/30/First-——-博客初体验/">
+      <a class="article-title" href="/2016/06/01/First-——-博客初体验/">
         First —— 博客初体验
         
       </a>
