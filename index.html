@@ -276,7 +276,25 @@
 <p>每一个文本元素和文本行元素，都会有一条基线，基线的位置受到文本的字体格式以及line-height的影响。</p>
 <p>1.2对齐延伸问题：什么是行框和行内框？</p>
 <p><img src=" https://zhaoxingzi.github.io/img/zx.png"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</div></pre></td></tr></table></figure>
+<p>在每一个段落行内，不同的行内元素除了包裹自身内容的内容框之外，还会自动生成一个行内框，其中没有标签包裹的文本会生成匿名行内框，不同的行内框会根据各自不同的line-height产生行间距，而行框则会刚好包括最高的顶端和最低的底端，从而来生成行框。</p>
+<p><img src=" https://zhaoxingzi.github.io/img/zxz.png"></p>
+<p>1.3对齐延伸问题：什么是替换元素。</p>
+<p>替换元素是指元素的内容本身并非文档直接表现的，换句话说，就是不同的页面中，浏览器不能确定其具体内容的元素，比如图片，按钮，因为图片的内容取决于图片引用的src属性源，按钮的类型则依据于其input类型，因此浏览器是不能确定今天img元素里面是一张美女图片，那么明天加载的页面里面img是不是一张美女图片。</p>
+<p>除了替换元素，其他的元素就是非替换元素。非替换元素和替换元素在行框中的影响，主要是其高度计算方式，替换元素在行框中的位置是由其height，padding和border来决定，而非替换元素在行框中的位置则是其line-height和字体样式。</p>
+<p>1.4对齐延伸问题：图片等替换元素在行框中有什么影响。</p>
+<p>如果只有文本元素的话，那么行框是很好计算基线位置的，但是如果有图片按钮等替换元素的话，那么计算方式就会变的稍微复杂一些。</p>
+<p>在css中，有两种高度方式，一种是height，一种是line-height，这两种会决定元素的高度和位置，对于图片等行内替换元素来说，height是行框计算的依据，line-height对图片、按钮不会产生影响。</p>
+<p>因此，如果有图片在行内的话，那么图片的底端会对齐文本的基线。</p>
+<p>那么，如果图片的高度高于其他行内框的整体高度，这个时候会发生什么呢？</p>
+<p>图片会在对齐原来的行框文本基线的基础上，撑开高度，使行框最高点刚好包括图片的顶端。</p>
+<p>因此，当p段落里面的line-height都是40px的时候，加入图片之后，行框的高度就会比没有加入图片之前多50px - 40px=10px高度，因此基线就会下移10px的高度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=<span class="string">"img/img2.png"</span> height=<span class="string">"50px"</span> width=<span class="string">"50px"</span> alt=<span class="string">"高度图片"</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>1.5对齐延伸问题：浮动对行内元素产生了什么样的影响。</p>
+<p>设置一个元素的浮动之后，元素会从正常的文档流中去除，但是同时也会对原来的文档流产生一些影响。</p>
+<p>可以设想一下，在长方形区域的水面上，有很多人都想要有一个固定位置的水床（浏览器盒模型布局），但是固定水床需要登记（告诉浏览器的如何布局计算）。突然有一天，有一个人想要在长方形区域的最左侧建一个水床（设置元素左浮动），它悄悄地从水底移动到最左侧，把原先的水床挤走（浮动元素会尽可能移动在到容器最高处，及最左处或最右处），在最左侧那里建了一所水床，没有登记（没有告知父容器高度，因此产生高度塌陷）。其他的人不知道，在去最左端的固定水床的时候，发现已经有人固定了，因此只能固定在它旁边（浮动会产生环绕效果，而这一点就是因为浮动元素从正常文档流中去除掉的原因）。</p>
+<p>图片是属于替换元素，在行框中的计算中，是依据于图片的高度，如果图片进行浮动的话，对于行框来说，图片不存在了，因此，行框还是依据原来的文本行基线来计算基线，进行对齐。</p>
+<p><code>bash
+本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</code>s</p>
 
       
     </div>
