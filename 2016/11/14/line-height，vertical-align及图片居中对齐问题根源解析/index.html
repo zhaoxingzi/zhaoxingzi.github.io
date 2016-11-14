@@ -27,7 +27,7 @@
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/x.png">
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/zx.png">
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/zxz.png">
-<meta property="og:updated_time" content="2016-11-14T13:50:57.000Z">
+<meta property="og:updated_time" content="2016-11-14T13:52:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="line-height，vertical-align及图片居中对齐问题根源解析">
 <meta name="twitter:description" content="关于图片居中对齐的问题，进入前端行业虽然有一段时间了，以为自己懂了，可是实际上还是一知半解，找了一些博客来看了一下，但是感觉讲的有点碎，看完还是一知半解。
@@ -318,8 +318,7 @@
 <p>设置一个元素的浮动之后，元素会从正常的文档流中去除，但是同时也会对原来的文档流产生一些影响。</p>
 <p>可以设想一下，在长方形区域的水面上，有很多人都想要有一个固定位置的水床（浏览器盒模型布局），但是固定水床需要登记（告诉浏览器的如何布局计算）。突然有一天，有一个人想要在长方形区域的最左侧建一个水床（设置元素左浮动），它悄悄地从水底移动到最左侧，把原先的水床挤走（浮动元素会尽可能移动在到容器最高处，及最左处或最右处），在最左侧那里建了一所水床，没有登记（没有告知父容器高度，因此产生高度塌陷）。其他的人不知道，在去最左端的固定水床的时候，发现已经有人固定了，因此只能固定在它旁边（浮动会产生环绕效果，而这一点就是因为浮动元素从正常文档流中去除掉的原因）。</p>
 <p>图片是属于替换元素，在行框中的计算中，是依据于图片的高度，如果图片进行浮动的话，对于行框来说，图片不存在了，因此，行框还是依据原来的文本行基线来计算基线，进行对齐。</p>
-<p><code>bash
-本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</code>s</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</div></pre></td></tr></table></figure>
 
       
     </div>
