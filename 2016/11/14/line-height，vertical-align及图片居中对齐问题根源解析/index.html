@@ -24,7 +24,9 @@
 1.line-height是个什么东西，范围在哪里，具体应用于什么元素？
 2.vertiacal-align和line-height有什么关系，元素">
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/z.png">
-<meta property="og:updated_time" content="2016-11-14T13:38:11.000Z">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/x.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/zx.png">
+<meta property="og:updated_time" content="2016-11-14T13:45:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="line-height，vertical-align及图片居中对齐问题根源解析">
 <meta name="twitter:description" content="关于图片居中对齐的问题，进入前端行业虽然有一段时间了，以为自己懂了，可是实际上还是一知半解，找了一些博客来看了一下，但是感觉讲的有点碎，看完还是一知半解。
@@ -284,6 +286,21 @@
 <p>结论如何推导出来</p>
 <p>看完这些结论，想必很多人也是一时之间有些不明白所以然，因为不同的人掌握的背景知识是不同的，而这些结论的关键恰恰是这些关键性的碎片化知识，它们起到了穿针引线的作用。下面来梳理一下，到底是怎么得出结论的。</p>
 <p><img src=" https://zhaoxingzi.github.io/img/z.png"></p>
+<hr>
+<p> ————————————————我是分割线————————————————————————————— </p>
+<hr>
+<p>1.核心问题：关于对齐</p>
+<p>对齐涉及到两个对象，要对齐元素及对齐对象，一个对象是不可能对齐。比如平常在战队，从高往低对齐，每个人都要有一个参考系，对着参考系进行对齐。</p>
+<p>而行内元素的对齐，除了行内元素本身，还有一个参考系，这个参考系就是行框的基线，而行框的基线依据于行内框元素的基线位置。</p>
+<p>1.1对齐延伸问题：什么是基线？</p>
+<p>每一个文本元素自身都会有四条线，顶线，中线，基线，底线。而基线一般是指文本元素中以x字母为准，x字母的下边缘为该文本元素的基线。</p>
+<p>而行高则是两个文本行基线之间的距离，往往使段落产生间距。</p>
+<p>但是也可以这样理解，行高 = 字体大小 + 上半行距 + 下半行距（其中上下半行距相等，这个等式可以从图中推导出来）</p>
+<p><img src=" https://zhaoxingzi.github.io/img/x.png"></p>
+<p>每一个文本元素和文本行元素，都会有一条基线，基线的位置受到文本的字体格式以及line-height的影响。</p>
+<p>1.2对齐延伸问题：什么是行框和行内框？</p>
+<p><img src=" https://zhaoxingzi.github.io/img/zx.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</div></pre></td></tr></table></figure>
 
       
     </div>
