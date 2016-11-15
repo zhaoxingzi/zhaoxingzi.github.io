@@ -27,7 +27,12 @@
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/x.png">
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/zx.png">
 <meta property="og:image" content=" https://zhaoxingzi.github.io/img/zxz.png">
-<meta property="og:updated_time" content="2016-11-14T13:52:09.000Z">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/float1.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/float2.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/no.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/sph.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/english.png">
+<meta property="og:updated_time" content="2016-11-15T01:03:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="line-height，vertical-align及图片居中对齐问题根源解析">
 <meta name="twitter:description" content="关于图片居中对齐的问题，进入前端行业虽然有一段时间了，以为自己懂了，可是实际上还是一知半解，找了一些博客来看了一下，但是感觉讲的有点碎，看完还是一知半解。
@@ -303,6 +308,10 @@
 <p><img src=" https://zhaoxingzi.github.io/img/zx.png"></p>
 <p>在每一个段落行内，不同的行内元素除了包裹自身内容的内容框之外，还会自动生成一个行内框，其中没有标签包裹的文本会生成匿名行内框，不同的行内框会根据各自不同的line-height产生行间距，而行框则会刚好包括最高的顶端和最低的底端，从而来生成行框。</p>
 <p><img src=" https://zhaoxingzi.github.io/img/zxz.png"></p>
+<p>行内框的基线很好计算，但是行框的基线如何计算呢？</p>
+<p>行框的基线是立足于行内框中基线最低的元素，也就是line-height最大的文本元素。</p>
+<p> 下面的例子，可以测试出来，当设置其中一个行内文本元素的line-height超过其他行内元素的line-height的时候，整个容器会自动扩展，位置也会往下移动。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line"> </div><div class="line">&lt;html lang=<span class="string">"zh-cn"</span>&gt;</div><div class="line"> </div><div class="line">&lt;head&gt;</div><div class="line"> </div><div class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</div><div class="line"> </div><div class="line">&lt;title&gt;测试行框基线&lt;/title&gt;</div><div class="line"> </div><div class="line">&lt;style&gt;</div><div class="line"> </div><div class="line">p&#123;border:1px solid red;line-height:20px;&#125;</div><div class="line"> </div><div class="line">span&#123;line-height:40px;&#125; /*可以在浏览器中取消一下，观察一下位置变动*/</div><div class="line"> </div><div class="line">&lt;/style&gt;</div><div class="line"> </div><div class="line">&lt;/head&gt;</div><div class="line"> </div><div class="line">&lt;body&gt;</div><div class="line"> </div><div class="line">&lt;p&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt;   匿名文本内容    &lt;em&gt;文本内容2&lt;/em&gt;   &lt;img src=<span class="string">""</span> alt=<span class="string">""</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div><div class="line"> </div><div class="line">&lt;/body&gt;</div><div class="line"> </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>1.3对齐延伸问题：什么是替换元素。</p>
 <p>替换元素是指元素的内容本身并非文档直接表现的，换句话说，就是不同的页面中，浏览器不能确定其具体内容的元素，比如图片，按钮，因为图片的内容取决于图片引用的src属性源，按钮的类型则依据于其input类型，因此浏览器是不能确定今天img元素里面是一张美女图片，那么明天加载的页面里面img是不是一张美女图片。</p>
 <p>除了替换元素，其他的元素就是非替换元素。非替换元素和替换元素在行框中的影响，主要是其高度计算方式，替换元素在行框中的位置是由其height，padding和border来决定，而非替换元素在行框中的位置则是其line-height和字体样式。</p>
@@ -318,6 +327,25 @@
 <p>设置一个元素的浮动之后，元素会从正常的文档流中去除，但是同时也会对原来的文档流产生一些影响。</p>
 <p>可以设想一下，在长方形区域的水面上，有很多人都想要有一个固定位置的水床（浏览器盒模型布局），但是固定水床需要登记（告诉浏览器的如何布局计算）。突然有一天，有一个人想要在长方形区域的最左侧建一个水床（设置元素左浮动），它悄悄地从水底移动到最左侧，把原先的水床挤走（浮动元素会尽可能移动在到容器最高处，及最左处或最右处），在最左侧那里建了一所水床，没有登记（没有告知父容器高度，因此产生高度塌陷）。其他的人不知道，在去最左端的固定水床的时候，发现已经有人固定了，因此只能固定在它旁边（浮动会产生环绕效果，而这一点就是因为浮动元素从正常文档流中去除掉的原因）。</p>
 <p>图片是属于替换元素，在行框中的计算中，是依据于图片的高度，如果图片进行浮动的话，对于行框来说，图片不存在了，因此，行框还是依据原来的文本行基线来计算基线，进行对齐。</p>
+<p>因此，效果如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=<span class="string">"img/img2.png"</span> height=<span class="string">"100px"</span> width=<span class="string">"100px"</span> alt=<span class="string">"高度图片"</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>图片没有浮动：</p>
+<p><img src=" https://zhaoxingzi.github.io/img/float1.png"></p>
+<p>图片左浮动：</p>
+<p><img src=" https://zhaoxingzi.github.io/img/float2.png"></p>
+<p>没有图片：</p>
+<p><img src=" https://zhaoxingzi.github.io/img/no.png"></p>
+<p>2.对齐的过程</p>
+<p>行内元素是默认设置的vertical-align为baseline，也就是基线对齐。当一个文本行开始渲染的时候，</p>
+<p>1.首先浏览器会找出每一个元素的类型，是替换元素还是非替换元素</p>
+<p>2.然后根据它们的height或者line-height以及字体大小来生成每个元素行内框</p>
+<p>3.确定行内框基线位置，确定行框基线位置</p>
+<p>4.根据每个元素是否设置vertical-align来进行对齐。</p>
+<p>3.关于居中对齐</p>
+<p>vertical-align：middle是将元素行内框的中点与父元素基线上方0.5ex处的一个点对齐，这里的1ex相对于元素的font-size来计算x字母的高度，1ex等于该字体下x的字母高度。</p>
+<p>多数浏览器会将1ex处理为0.5em，也就是0.5倍字体大小font-size。</p>
+<p><img src=" https://zhaoxingzi.github.io/img/sph.png"></p>
+<p><img src=" https://zhaoxingzi.github.io/img/english.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</div></pre></td></tr></table></figure>
 
       
