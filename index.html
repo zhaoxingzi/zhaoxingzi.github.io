@@ -234,90 +234,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关于图片居中对齐的问题，进入前端行业虽然有一段时间了，以为自己懂了，可是实际上还是一知半解，找了一些博客来看了一下，但是感觉讲的有点碎，看完还是一知半解。</p>
-<p>查阅了一下《css权威指南》，结合遇到的问题，这才了解到前前后后的问题根源。</p>
-<p>主要的问题如下：</p>
-<p>1.line-height是个什么东西，范围在哪里，具体应用于什么元素？</p>
-<p>2.vertiacal-align和line-height有什么关系，元素对齐到底是一个什么样的过程。</p>
-<p>3.图片对齐和文本对齐有什么区别？</p>
-<p>4.浮动元素为什么对齐会出现问题？</p>
-<p>——-》解答这些问题，牵涉的碎片化知识：</p>
-<p>基线，底端，行内框，行框，行间距，替换元素及非替换元素，对齐</p>
-<p>下面围绕着上面的三个问题，以及相应的碎片化知识点来进行解析问题。</p>
-<p>一般来说，之所以不了解vertical-align，是因为不清楚对齐后面的这些碎片化知识，而这些也是很多博客在解析的时候常常忽略的地方。</p>
-<p>先说结论：</p>
-<p>1.line-height是行高，主要作用是在文本上下行间距，基于文本产生影响文本元素位置的作用，对于行内元素的位置影响显著，但是对于块元素的影响甚微。</p>
-<p>2.vertical-align和line-height的关系是：line-height是vertical-align的对齐依据。vertical-align主要是影响行内元素的对齐，不影响块元素布局。</p>
-<p>而决定行内元素对齐的有两个因素，1.元素本身的height（类似于图片和按钮等替换元素）2.还有其他span、em非替换元素的line-height。行框通过计算height，line-height，来将各个行内元素与行内的基线进行对齐。</p>
-<p>但是当产生浮动的时候，浮动会对行内元素的布局产生特殊影响，因此不会按照原先的方式来进行对齐，此时设置了vertical-align往往没有效果。</p>
-<p>3.图片的对齐是将自己的底端，也就是图片的最下端与行框的默认基线进行对齐，对齐依据是底端。影响图片对齐的依据是图片的height、padding、border大小。</p>
-<p>而文本元素，例如<span>文本内容</span>，则是将自身的行内框基线与行框基线进行对齐，对齐依据是基线。影响行内文本元素的依据是line-height，以及元素自身的font属性。</p>
-<p>4.元素浮动之后实际上是从正常的文档流中除去了（因此会出现高度塌陷，父容器收缩的问题），但是同时又对文档产生着影响（最经典的就是环绕效果）。元素浮动类似于一个被除名的黑户，虽然不在土地登记簿上，但是的的确确占用一块地方，因此别的元素也不能因此占据浮动元素的空间，但是因为是黑户，所以别的元素会环绕它，好像它不存在一样。</p>
-<p>元素浮动之后，会尽力往容器的左右两侧移动，尽可能地“漂”到容器的最高处。</p>
-<p>因此此时行内元素浮动之后，浮动的规则会覆盖vertical-align的规则，这个时候设置vertical-align往往会出现问题，最典型的就是对一个段落中的图片进行浮动，然后设置vertical-align，但是发现往往不起作用。</p>
-<p>但是文本元素浮动之后往往不会受到影响，因为line-height实际上还是作用于文本元素的，虽然文本元素的容器位置“漂”到其他位置，但是里面的文本因为line-height，仍然有行高，可以影响到行内元素的布局。</p>
-<hr>
-<p> ————————————————我是分割线—————————————————————————————</p>
-<hr>
-<p>结论如何推导出来</p>
-<p>看完这些结论，想必很多人也是一时之间有些不明白所以然，因为不同的人掌握的背景知识是不同的，而这些结论的关键恰恰是这些关键性的碎片化知识，它们起到了穿针引线的作用。下面来梳理一下，到底是怎么得出结论的。</p>
-<p><img src=" https://zhaoxingzi.github.io/img/z.png"></p>
-<hr>
-<p> ————————————————我是分割线————————————————————————————— </p>
-<hr>
-<p>1.核心问题：关于对齐</p>
-<p>对齐涉及到两个对象，要对齐元素及对齐对象，一个对象是不可能对齐。比如平常在战队，从高往低对齐，每个人都要有一个参考系，对着参考系进行对齐。</p>
-<p>而行内元素的对齐，除了行内元素本身，还有一个参考系，这个参考系就是行框的基线，而行框的基线依据于行内框元素的基线位置。</p>
-<p>1.1对齐延伸问题：什么是基线？</p>
-<p>每一个文本元素自身都会有四条线，顶线，中线，基线，底线。而基线一般是指文本元素中以x字母为准，x字母的下边缘为该文本元素的基线。</p>
-<p>而行高则是两个文本行基线之间的距离，往往使段落产生间距。</p>
-<p>但是也可以这样理解，行高 = 字体大小 + 上半行距 + 下半行距（其中上下半行距相等，这个等式可以从图中推导出来）</p>
-<p><img src=" https://zhaoxingzi.github.io/img/x.png"></p>
-<p>每一个文本元素和文本行元素，都会有一条基线，基线的位置受到文本的字体格式以及line-height的影响。</p>
-<p>1.2对齐延伸问题：什么是行框和行内框？</p>
-<p><img src=" https://zhaoxingzi.github.io/img/zx.png"></p>
-<p>在每一个段落行内，不同的行内元素除了包裹自身内容的内容框之外，还会自动生成一个行内框，其中没有标签包裹的文本会生成匿名行内框，不同的行内框会根据各自不同的line-height产生行间距，而行框则会刚好包括最高的顶端和最低的底端，从而来生成行框。</p>
-<p><img src=" https://zhaoxingzi.github.io/img/zxz.png"></p>
-<p>行内框的基线很好计算，但是行框的基线如何计算呢？</p>
-<p>行框的基线是立足于行内框中基线最低的元素，也就是line-height最大的文本元素。</p>
-<p> 下面的例子，可以测试出来，当设置其中一个行内文本元素的line-height超过其他行内元素的line-height的时候，整个容器会自动扩展，位置也会往下移动。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line"> </div><div class="line">&lt;html lang=<span class="string">"zh-cn"</span>&gt;</div><div class="line"> </div><div class="line">&lt;head&gt;</div><div class="line"> </div><div class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=utf-8"</span> /&gt;</div><div class="line"> </div><div class="line">&lt;title&gt;测试行框基线&lt;/title&gt;</div><div class="line"> </div><div class="line">&lt;style&gt;</div><div class="line"> </div><div class="line">p&#123;border:1px solid red;line-height:20px;&#125;</div><div class="line"> </div><div class="line">span&#123;line-height:40px;&#125; /*可以在浏览器中取消一下，观察一下位置变动*/</div><div class="line"> </div><div class="line">&lt;/style&gt;</div><div class="line"> </div><div class="line">&lt;/head&gt;</div><div class="line"> </div><div class="line">&lt;body&gt;</div><div class="line"> </div><div class="line">&lt;p&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt;   匿名文本内容    &lt;em&gt;文本内容2&lt;/em&gt;   &lt;img src=<span class="string">""</span> alt=<span class="string">""</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div><div class="line"> </div><div class="line">&lt;/body&gt;</div><div class="line"> </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>1.3对齐延伸问题：什么是替换元素。</p>
-<p>替换元素是指元素的内容本身并非文档直接表现的，换句话说，就是不同的页面中，浏览器不能确定其具体内容的元素，比如图片，按钮，因为图片的内容取决于图片引用的src属性源，按钮的类型则依据于其input类型，因此浏览器是不能确定今天img元素里面是一张美女图片，那么明天加载的页面里面img是不是一张美女图片。</p>
-<p>除了替换元素，其他的元素就是非替换元素。非替换元素和替换元素在行框中的影响，主要是其高度计算方式，替换元素在行框中的位置是由其height，padding和border来决定，而非替换元素在行框中的位置则是其line-height和字体样式。</p>
-<p>1.4对齐延伸问题：图片等替换元素在行框中有什么影响。</p>
-<p>如果只有文本元素的话，那么行框是很好计算基线位置的，但是如果有图片按钮等替换元素的话，那么计算方式就会变的稍微复杂一些。</p>
-<p>在css中，有两种高度方式，一种是height，一种是line-height，这两种会决定元素的高度和位置，对于图片等行内替换元素来说，height是行框计算的依据，line-height对图片、按钮不会产生影响。</p>
-<p>因此，如果有图片在行内的话，那么图片的底端会对齐文本的基线。</p>
-<p>那么，如果图片的高度高于其他行内框的整体高度，这个时候会发生什么呢？</p>
-<p>图片会在对齐原来的行框文本基线的基础上，撑开高度，使行框最高点刚好包括图片的顶端。</p>
-<p>因此，当p段落里面的line-height都是40px的时候，加入图片之后，行框的高度就会比没有加入图片之前多50px - 40px=10px高度，因此基线就会下移10px的高度。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=<span class="string">"img/img2.png"</span> height=<span class="string">"50px"</span> width=<span class="string">"50px"</span> alt=<span class="string">"高度图片"</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
-<p>1.5对齐延伸问题：浮动对行内元素产生了什么样的影响。</p>
-<p>设置一个元素的浮动之后，元素会从正常的文档流中去除，但是同时也会对原来的文档流产生一些影响。</p>
-<p>可以设想一下，在长方形区域的水面上，有很多人都想要有一个固定位置的水床（浏览器盒模型布局），但是固定水床需要登记（告诉浏览器的如何布局计算）。突然有一天，有一个人想要在长方形区域的最左侧建一个水床（设置元素左浮动），它悄悄地从水底移动到最左侧，把原先的水床挤走（浮动元素会尽可能移动在到容器最高处，及最左处或最右处），在最左侧那里建了一所水床，没有登记（没有告知父容器高度，因此产生高度塌陷）。其他的人不知道，在去最左端的固定水床的时候，发现已经有人固定了，因此只能固定在它旁边（浮动会产生环绕效果，而这一点就是因为浮动元素从正常文档流中去除掉的原因）。</p>
-<p>图片是属于替换元素，在行框中的计算中，是依据于图片的高度，如果图片进行浮动的话，对于行框来说，图片不存在了，因此，行框还是依据原来的文本行基线来计算基线，进行对齐。</p>
-<p>因此，效果如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;p style=”line-height:40px;”&gt;</div><div class="line"> </div><div class="line">&lt;span&gt;文本内容1&lt;/span&gt; &lt;em&gt;文本内容2&lt;/em&gt; &lt;img src=<span class="string">"img/img2.png"</span> height=<span class="string">"100px"</span> width=<span class="string">"100px"</span> alt=<span class="string">"高度图片"</span>&gt;</div><div class="line"> </div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
-<p>图片没有浮动：</p>
-<p><img src=" https://zhaoxingzi.github.io/img/float1.png"></p>
-<p>图片左浮动：</p>
-<p><img src=" https://zhaoxingzi.github.io/img/float2.png"></p>
-<p>没有图片：</p>
-<p><img src=" https://zhaoxingzi.github.io/img/no.png"></p>
-<p>2.对齐的过程</p>
-<p>行内元素是默认设置的vertical-align为baseline，也就是基线对齐。当一个文本行开始渲染的时候，</p>
-<p>1.首先浏览器会找出每一个元素的类型，是替换元素还是非替换元素</p>
-<p>2.然后根据它们的height或者line-height以及字体大小来生成每个元素行内框</p>
-<p>3.确定行内框基线位置，确定行框基线位置</p>
-<p>4.根据每个元素是否设置vertical-align来进行对齐。</p>
-<p>3.关于居中对齐</p>
-<p>vertical-align：middle是将元素行内框的中点与父元素基线上方0.5ex处的一个点对齐，这里的1ex相对于元素的font-size来计算x字母的高度，1ex等于该字体下x的字母高度。</p>
-<p>多数浏览器会将1ex处理为0.5em，也就是0.5倍字体大小font-size。</p>
-<p><img src=" https://zhaoxingzi.github.io/img/sph.png"></p>
-<p><img src=" https://zhaoxingzi.github.io/img/english.png"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本文转载：http://www.cnblogs.com/doctor-chen/p/6049374.html</div></pre></td></tr></table></figure>
-
+        <p>+
       
     </div>
     
@@ -329,6 +246,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2016/11/14/line-height，vertical-align及图片居中对齐问题根源解析/#more">more >></a>
+        </p>
       
     
   </div>
