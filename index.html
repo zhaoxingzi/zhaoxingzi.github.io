@@ -466,121 +466,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>最近在学习CSS的3D动画，为了能够体现3D的空间感和视觉效果。</p>
-<pre><code>* 我们要在盒子的外层景深效果 
-    * perspective ：代表的是景深的距离，眼睛离3D容器的Z面的距离
-    * perspective-origin : 视觉点，代表我们眼睛所在的位置（不同角度看同一个东西，形状也会不一样）调整眼睛的位置。
-* 设置一个3D容器 transform-style:preserve-3d
-</code></pre><p><a href="https://zhaoxingzi.github.io/threeD/lianxi.html" target="_blank" rel="external">demo</a></p>
-<pre><code class="bash">&lt;!doctype html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=<span class="string">"utf-8"</span>/&gt;
-        &lt;title&gt;&lt;/title&gt;
-        &lt;style&gt;
-        div div div{
-                width:200px;
-                height:200px;
-                position:absolute;
-                top:300px;
-                left:300px;
-                color:white;
-                text-align:center;
-                line-height:200px;
-                font-size:60px;
-            }
-            .eyes{
-                perspective:8000px;
-            }
-            .box{
-                transform-style:preserve-3d;
-                transition:all 5s ease-in 0.1s;
-                height:800px;
-                width:800px;
-                -webkit-animation:run 3s ease-in  infinite;
-            }
-            @-webkit-keyframes run{
-                from{transform:rotateX(0deg) rotateY(0deg);}
-                to{transform:rotateX(360deg) rotateY(360deg);}
-            }
-            .one{
-                background:pink;
-                transform:translateZ(100px);
-                opacity:0.8;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .one{
-                transform:translateZ(300px) scale(2,2);
-            }
-            .two{
-                background:lightgreen;
-                transform:rotateX(90deg) translateZ(-100px);
-                opacity:0.5;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .two{
-                transform:rotateX(90deg) translateZ(-300px) scale(2,2);
-            }
-            .three{
-                background:gold;
-                transform:rotateX(90deg) translateZ(100px);
-                opacity:0.5;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .three{
-                transform:rotateX(90deg) translateZ(300px) scale(2,2);
-            }
-            .four{
-                background:orange;
-                transform:rotateY(90deg) translateZ(100px);
-                opacity:0.5;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .four{
-                transform:rotateY(90deg) translateZ(300px) scale(2,2);
-            }
-            .five{
-                background:purple;
-                transform:rotateY(90deg) translateZ(-100px);
-                opacity:0.5;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .five{
-                transform:rotateY(90deg) translateZ(-300px) scale(2,2);
-            }
-            .six{
-                background:lightblue;
-                transform:translateZ(-100px);
-                opacity:0.7;
-                transition:all 3s ease-in 0.2s;
-            }
-            .box:hover .six{
-                transform:translateZ(-300px) scale(2,2);
-            }
-            .seven{
-                background:red;
-            }
-
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- eyes  代表的是景深层，我们可以理解为眼睛到3D容器的Z面的距离 --&gt;
-        &lt;div class=<span class="string">"eyes"</span>&gt;
-            &lt;!-- box代表的是3D容器层，设置    transform-style:preserve-3d;之后，这个容器不单单可以在X，Y轴上有其他的div，也可以在Z轴方向布局其他div，而box本身在这个容器得Z轴面的0值。 --&gt;
-            &lt;div class=<span class="string">"box"</span>&gt;
-                &lt;div class=<span class="string">"one"</span>&gt;1&lt;/div&gt;
-                &lt;div class=<span class="string">"two"</span>&gt;2&lt;/div&gt;
-                &lt;div class=<span class="string">"three"</span>&gt;3&lt;/div&gt;
-                &lt;div class=<span class="string">"four"</span>&gt;4&lt;/div&gt;
-                &lt;div class=<span class="string">"five"</span>&gt;5&lt;/div&gt;
-                &lt;div class=<span class="string">"six"</span>&gt;6&lt;/div&gt;
-                &lt;div class=<span class="string">"seven"</span>&gt;&lt;/div&gt;
-            &lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
+        <p>+
       
     </div>
     
@@ -592,6 +478,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/08/3D旋转盒子/#more">more >></a>
+        </p>
       
     
   </div>
