@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<style>
+		div div div{
+				width:200px;
+				height:200px;
+				position:absolute;
+				top:300px;
+				left:300px;
+				color:white;
+				text-align:center;
+				line-height:200px;
+				font-size:60px;
+			}
+			.eyes{
+				perspective:8000px;
+			}
+			.box{
+				transform-style:preserve-3d;
+				transition:all 5s ease-in 0.1s;
+				height:800px;
+				width:800px;
+				-webkit-animation:run 3s ease-in  infinite;
+			}
+			@-webkit-keyframes run{
+				from{transform:rotateX(0deg) rotateY(0deg);}
+				to{transform:rotateX(360deg) rotateY(360deg);}
+			}
+			.one{
+				background:pink;
+				transform:translateZ(100px);
+				opacity:0.8;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .one{
+				transform:translateZ(300px) scale(2,2);
+			}
+			.two{
+				background:lightgreen;
+				transform:rotateX(90deg) translateZ(-100px);
+				opacity:0.5;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .two{
+				transform:rotateX(90deg) translateZ(-300px) scale(2,2);
+			}
+			.three{
+				background:gold;
+				transform:rotateX(90deg) translateZ(100px);
+				opacity:0.5;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .three{
+				transform:rotateX(90deg) translateZ(300px) scale(2,2);
+			}
+			.four{
+				background:orange;
+				transform:rotateY(90deg) translateZ(100px);
+				opacity:0.5;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .four{
+				transform:rotateY(90deg) translateZ(300px) scale(2,2);
+			}
+			.five{
+				background:purple;
+				transform:rotateY(90deg) translateZ(-100px);
+				opacity:0.5;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .five{
+				transform:rotateY(90deg) translateZ(-300px) scale(2,2);
+			}
+			.six{
+				background:lightblue;
+				transform:translateZ(-100px);
+				opacity:0.7;
+				transition:all 3s ease-in 0.2s;
+			}
+			.box:hover .six{
+				transform:translateZ(-300px) scale(2,2);
+			}
+			.seven{
+				background:red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="eyes">
+			<div class="box">
+				<div class="one">1</div>
+				<div class="two">2</div>
+				<div class="three">3</div>
+				<div class="four">4</div>
+				<div class="five">5</div>
+				<div class="six">6</div>
+				<div class="seven"></div>
+			</div>
+	</body>
+</html>

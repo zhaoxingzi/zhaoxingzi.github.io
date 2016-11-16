@@ -1,0 +1,99 @@
+.eyes{
+	perspective:1000px;
+}
+.box{
+	transform-style:preserve-3d;
+	/*opacity:0.3;*/
+	height:600px;
+	-webkit-animation:run 3s ease-in 10s infinite;
+	transition:all 3s ease-in 0.2s;
+
+	/*transform:rotateX(0deg) rotateY(-80deg);*/
+}
+.box:hover{
+	transform:rotateY(360deg) rotateX(360deg);
+	transform-origin:450px 300px;
+} 
+/*@-webkit-keyframes run{
+	0%{transform:rotateX(0deg);}
+	25%{transform:rotateX(3360deg) rotateY(3360deg);}
+	40%{transform:rotateX(3360deg) rotateY(3360deg);}
+	50%{transform:rotateX(3360deg) rotateY(3360deg);}
+	75%{transform:rotateX(3360deg) rotateY(3360deg);}
+	100%{transform:rotateX(3360deg) rotateY(3360deg);}
+}*/
+.box div{
+	width:200px;
+	height:200px;
+	position:absolute;
+	top:200px;
+	left:350px;
+	text-align:center;
+	line-height:200px;
+	font-size:60px;
+	color:white;
+}
+.red{
+	background:red;
+	transform:translateZ(100px);
+
+}
+.div1{
+	background:orange;
+	opacity:0.6;
+	transition:all 3s ease-in 0.2s;
+}
+.box:hover .div1{
+	transform:translateZ(-100px) scale(1,1);
+}
+.div2{
+	opacity:0.6;
+	background:blue;
+	transform:rotateY(90deg);
+	transform-origin:200px 200px;
+	transition:all 3s ease-in 0.2s;
+}
+.box:hover .div2{
+	transform:translateX(100px) translateY(100px) rotateY(90deg) scale(1,1);
+}
+.div3{
+	/*opacity:0.6;*/
+	background:yellow;
+	transform:rotateX(90deg) translateY(100px) translateZ(100px);
+	transition:all 3s ease-in 0.2s;
+
+}
+.box:hover .div3{
+	transform:scale(1,1)  ;
+	transform:rotateX(90deg) translateZ(100px) translateY(100px) translateX(-50px) scale(2,2);
+}
+.div4{
+	opacity:0.6;
+	background:purple;
+	transform:rotateX(-90deg);
+	transform-origin:200px 200px;
+	transition:all 3s ease-in 0.2s;
+
+}
+.box:hover .div4{
+	transform:translateY(200px) translateX(50px) rotateX(-90deg) scale(1,1);
+}
+.div5{
+	opacity:0.6;
+	background:green;
+	transform:rotateY(-90deg);
+	transform-origin:0px 200px;
+	transition:all 3s ease-in 0.2s;
+}
+.box:hover .div5{
+	transform:translateX(-200px) translateY(100px) rotateY(-90deg) scale(1,1);
+}
+.div6{
+	opacity:0.6;
+	background:pink;
+	transform:translateZ(200px) ;
+	transition:all 3s ease-in 0.2s;
+}
+.box:hover .div6{
+	transform:translateZ(400px) translateY(100px) scale(1,1);
+}
