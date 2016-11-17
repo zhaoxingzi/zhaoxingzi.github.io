@@ -88,11 +88,6 @@ console.log(UL);
 var str1="";
 for(var i=0; i<77;i++){
     str1 +=  '<li><a href="#"><img src="'+item[0].pic+'"></a>';
-        // '<div class="mask">'+item[0].title+'</div>'+
-        // '<div class="icon"><img src="'+item[0].icon+'"><span>'+item[0].name+'</span></div>'+
-        // '<div class="icon"><img src="'+item[0].iphone+'"><span>'+item[0].tell+'</span></div>'+
-        // '<div class="icon"><img src="'+item[0].location+'"><span><a href="#">'+item[0].address+'</a></span></div>'+
-        // '</li>';
 }
 UL.innerHTML += str1;
 console.log(UL.innerHTML)
