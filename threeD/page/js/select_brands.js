@@ -86,7 +86,7 @@ console.log(item)
 var UL = document.querySelector("#itemContainer");
 console.log(UL);
 var str1="";
-for(var i=0; i<267;i++){
+for(var i=0; i<77;i++){
     str1 +=  '<li><a href="#"><img src="'+item[0].pic+'"></a>';
         // '<div class="mask">'+item[0].title+'</div>'+
         // '<div class="icon"><img src="'+item[0].icon+'"><span>'+item[0].name+'</span></div>'+

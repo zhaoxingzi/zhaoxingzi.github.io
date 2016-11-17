@@ -20,7 +20,7 @@
         last: false,
         links: "numeric", // blank || title
         startPage: 1,
-        perPage: 40,
+        perPage: 10,
         midRange: 5,
         startRange: 1,
         endRange: 1,
