@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2; }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }

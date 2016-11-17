@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2; }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.selectGoods {
+  width: 100%;
+  margin-top: 41px;
+  position: relative;
+  bottom: 40px; }
+  .selectGoods .goods_center {
+    width: 1181px;
+    margin: 0 auto; }
+    .selectGoods .goods_center #itemContainer {
+      width: 1181px;
+      overflow: hidden;
+      min-height: 0 !important; }
+      .selectGoods .goods_center #itemContainer li {
+        width: 271px;
+        height: 220px;
+        text-align:center;
+        margin-left: 20px;
+        margin-top: 4px;
+        float: left; }
+        .selectGoods .goods_center #itemContainer li .mask {
+          width: 271px;
+          height: 31px;
+          background: rgba(0, 0, 0, 0.4);
+          position: relative;
+          margin-top: -31px;
+          color: #fff;
+          text-align: center;
+          line-height: 31px;
+          font-size: 18px; }
+        .selectGoods .goods_center #itemContainer li .icon {
+          height: 18px;
+          padding-top: 14px;
+          padding-left: 10px; }
+          .selectGoods .goods_center #itemContainer li .icon img {
+            float: left; }
+          .selectGoods .goods_center #itemContainer li .icon span {
+            float: left;
+            margin-left: 10px;
+            font-size: 14px; }
+            .selectGoods .goods_center #itemContainer li .icon span a {
+              color: #000; }
+      .selectGoods .goods_center #itemContainer li:hover {
+        background: #fff;
+        box-shadow: 1px 4px 15px #000; }
+
+.page {
+  width: 1181px;
+  height: 36px;
+  position: relative; }
+
+.holder {
+  margin: 20px 0;
+  width: 1179px;
+  height: 36px; }
+
+input {
+  width: 40px;
+  text-align: center;
+  height: 28px;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 800px; }
+
+button {
+  width: 90px;
+  height: 36px;
+  color: #fff;
+  background: #008de1;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  top: -90px;
+  left: 840px; }
+
+.shouye {
+  width: 88px;
+  height: 32px;
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+  position: relative;
+  top: -56px;
+  left: 100px; }
+  .shouye a {
+    color: #008de1; }
+
+.dao {
+  position: relative;
+  top: -90px;
+  left: 782px;
+  color: #666666; }
+
+.ye {
+  position: relative;
+  top: -90px;
+  left: 828px;
+  color: #666666; }
+
+#legend1 {
+  width: 65px;
+  position: absolute;
+  top: 10px;
+  left: 720px;
+  color: #666666; }
+
+#legend2 {
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 980px;
+  color: #666666; }
+
+.holder a {
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  margin: 0 5px;
+  color: #333;
+  width: 30px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border: 1px solid #d2d2d2; }
+
+.holder a:hover {
+  background-color: #222;
+  color: #fff; }
+
+.holder a.jp-previous {
+  display: block;
+  margin-right: 15px;
+  margin-left: 215px;
+  width: 88px;
+  height: 32px;
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  line-height: 32px;
+  background: #fff;
+  color: #008de1; }
+
+.holder a.jp-next {
+  margin-left: 15px;
+  display: block;
+  margin-right: 15px;
+  width: 88px;
+  height: 32px;
+  border: 1px solid #d2d2d2;
+  text-align: center;
+  line-height: 32px;
+  background: #fff;
+  color: #008de1; }
+
+.holder a.jp-current, a.jp-current:hover {
+  color: #008de1;
+  font-weight: bold; }
+
+.holder a.jp-disabled, a.jp-disabled:hover {
+  color: #2696e3; }
+
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+  cursor: default;
+  background: none; }
+
+.holder span {
+  margin: 0 5px;
+  float: left;
+  display: block; }
