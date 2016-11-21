@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul,ol{
+			list-style: none;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			/*background: red;*/
+			margin: 50px auto 0;
+		}
+		input{
+			border: none;
+			width: 150px;
+			height: 40px;
+			color: #fff;
+			background: red;
+			font-size: 28px;
+			line-height: 40px;
+			text-align: center;
+			display: block;
+			margin:0 auto 30px;
+		}
+		.ball,.loading{
+			height: 45px;
+			padding-top: 15px;
+			margin: 0 15px;
+			background:pink;
+			overflow: hidden;
+		}
+		.ball {
+			display: none;
+		}
+		.loading{
+			text-align: center;
+			line-height: 45px;
+			font-size: 30px;
+			color: #000;
+		}
+		.ball ul{
+			width: 240px;
+			overflow: hidden;
+			float: left;
+		}
+		.ball ol{
+			width: 50px;
+			overflow: hidden;
+			float: right;
+		}
+		.ball ul li{
+			float: left;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: red;
+			line-height: 30px;
+			text-align: center;
+			color: #fff;
+			margin-left: 6px;
+		}
+		.ball ol li{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: blue;
+			line-height: 30px;
+			text-align: center;
+			color: #fff;
+			margin-left: 6px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input type="button" name="" value="开始摇奖">
+		<div class="loading"></div>
+		<div class="ball">
+			<ul>
+			</ul>
+			<ol>
+			</ol>
+		</div>
+	</div>
+</body>
+	<script type="">
+		var btn=document.querySelector("[type=button]");
+		btn.onclick=function(){
+			var redNum = 6;
+			var blueNum = 1;
+			var redList = [];
+			var blueList = [];
+			var redHtml = "";
+			var blueHtml = "";
+			for(var i=0;i<redNum;i++){
+				
+				redList.push(random(1,33));
+			}
+			for(var j=0;j<blueNum;j++){
+				blueList.push(random(1,16));
+			}
+
+			for(var h=0;h<redList.length;h++){
+				if(redList[h]<10){
+					redHtml += "<li>0"+redList[h]+"</li>";
+				}else{
+					redHtml += "<li>"+redList[h]+"</li>";
+				}
+			}
+
+			if(blueList[0]<10){
+				blueHtml += "<li>0"+blueList[0]+"</li>"
+			}else{
+				blueHtml += "<li>"+blueList[0]+"</li>"
+			}
+
+			setColor(".ball ul").innerHTML = redHtml;	
+			setColor(".ball ol").innerHTML = blueHtml;
+
+			setStyle(".loading","display","none");
+			setStyle(".ball","display","block");		
+		}
+
+		function setStyle(){
+			if(arguments.length >2){
+				document.querySelector(arguments[0]).style[arguments[1]] = arguments[2];
+			}
+			else{
+				for(var i in arguments[1]){
+					document.querySelector(arguments[0]).style[i] = arguments[1][i];
+				}
+			}
+		}
+
+		function random(m,n){
+			var num = Math.max(m,n) - Math.min(m,n);
+			return Math.round(Math.random()*num+Math.min(m,n));
+		}
+ 
+		function setColor(){
+			if(!arguments.length){
+				return alert("ni que shao can shu le !");
+			}else{
+				if(arguments.length == 1){
+					return document.querySelector(arguments[0]);
+				}else if(arguments.length > 1){
+					document.querySelector(arguments[0]).style.color = arguments[1];
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</html>
