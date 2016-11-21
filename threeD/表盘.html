@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="">
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			width:400px;
+			height:400px;
+			border-radius:10px;
+			background:black;
+			margin:30px auto;
+		}
+		.circle{
+			width:300px;
+			height:300px;
+			border-radius:50%;
+			border:1px pink solid;
+			background:snow;
+			margin:0px auto;
+			position:relative;
+			top:50px;
+		}
+		.a{
+			width:5px;
+			height:75px;
+			position:absolute;
+			top:75px;
+			left:150px;
+			background:black;
+			transform-origin:2.5px 65px;
+		}
+		.b{
+			width:3px;
+			height:100px;
+			position:absolute;
+			top:50px;
+			left:151px;
+			background:gray;
+			transform-origin:1.5px 90px;
+		}
+		.c{
+			width:2px;
+			height:130px;
+			position:absolute;
+			top:20px;
+			left:151.5px;
+			background:red;
+			transform-origin:1px 120px;
+		}
+		.fz,.fz-1,.fz-2{
+			width:210px;
+			height:210px;
+			font-size:20px;
+		}
+		.fz{
+			position:absolute;
+			top:45px;
+			left:45px;
+			transform:rotateZ(45deg);
+		}
+		.fz-1{
+			position:absolute;
+			top:45px;
+			left:45px;
+			transform:rotateZ(75deg);
+		}
+		.fz-2{
+			position:absolute;
+			top:45px;
+			left:45px;
+			transform:rotateZ(105deg);
+		}
+		.fz>div,.fz-1 >div,.fz-2 >div{
+			width:16px;
+			position:absolute;
+		}
+		.fz div:nth-child(1){
+			left:0;
+			top:0;
+			transform:rotateZ(-45deg);
+		}
+		.fz div:nth-child(2){
+			width:16px;
+			position:absolute;
+			left:0;
+			bottom:0;
+			transform:rotateZ(-45deg);
+		}
+		.fz div:nth-child(3){
+			width:16px;
+			position:absolute;
+			right:0;
+			top:0;
+
+			transform:rotateZ(-45deg);
+		}
+		.fz div:nth-child(4){
+			width:16px;
+			position:absolute;
+			right:0;
+			bottom:0;
+			transform:rotateZ(-45deg);
+		}
+		.fz-1 div:nth-child(1){
+			left:0;
+			top:0;
+			transform:rotateZ(-75deg);
+		} 
+		.fz-1 div:nth-child(2){
+			right:0;
+			top:0;
+			transform:rotateZ(-75deg);
+		}
+		.fz-1 div:nth-child(3){
+			right:0;
+			bottom:0;
+			transform:rotateZ(-75deg);
+		}
+		.fz-1 div:nth-child(4){
+			left:0;
+			bottom:0;
+			transform:rotateZ(-75deg);
+		}
+		.fz-2 div:nth-child(1){
+			left:0;
+			top:0;
+			transform:rotateZ(-105deg);
+		} 
+		.fz-2 div:nth-child(2){
+			right:0;
+			top:0;
+			transform:rotateZ(-105deg);
+		}
+		.fz-2 div:nth-child(3){
+			right:0;
+			bottom:0;
+			transform:rotateZ(-105deg);
+		}
+		.fz-2 div:nth-child(4){
+			left:0;
+			bottom:0;
+			transform:rotateZ(-105deg);
+		}
+	</style>
+</head>
+<body>
+ 	<div class="box">
+ 		<div class="circle">
+ 			<span class="a"></span>
+ 			<span class="b"></span>
+ 			<span class="c"></span>
+ 			<div class="fz">
+ 				<div>12</div>
+ 				<div>9</div>
+ 				<div>3</div>
+ 				<div>6</div>
+ 			</div>
+ 			<div class="fz-1">
+ 				<div>1</div>
+ 				<div>4</div>
+ 				<div>7</div>
+ 				<div>10</div>
+ 			</div>
+ 			<div class="fz-2">
+ 				<div>2</div>
+ 				<div>5</div>
+ 				<div>8</div>
+ 				<div>11</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</body>
+	<script type="">
+		var timer=null;
+		timer =setInterval(function(){
+			var riQi = new Date();
+		 	var hours =riQi.getHours();
+		 	var minutes =riQi.getMinutes();
+		 	var seconds =riQi.getSeconds();
+		 	var hou =document.querySelector(".a");
+		 	var minu =document.querySelector(".b");
+		 	var seco =document.querySelector(".c");
+		 	seco.style.transform = "rotateZ("+(seconds*6)+"deg)";
+		 	minu.style.transform = "rotateZ("+(minutes*6 +seconds*0.1)+"deg)";
+		 	hou.style.transform = "rotateZ("+(hours*30+minutes*0.5+seconds/120)+"deg)";
+		},1000);
+		
+	</script>
+</html>
