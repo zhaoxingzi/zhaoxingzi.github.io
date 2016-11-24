@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/08/css中的选择器类型/index.html">
 <meta property="og:site_name" content="zxz&&hsm">
 <meta property="og:description" content="hello,html + css 更配哦(⊙o⊙)+">
-<meta property="og:updated_time" content="2016-11-24T13:24:15.000Z">
+<meta property="og:updated_time" content="2016-11-24T13:42:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css中的选择器类型">
 <meta name="twitter:description" content="hello,html + css 更配哦(⊙o⊙)+">
@@ -251,18 +251,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="hello-html-css-更配哦-⊙o⊙"><a href="#hello-html-css-更配哦-⊙o⊙" class="headerlink" title="hello,html + css 更配哦(⊙o⊙)"></a>hello,html + css 更配哦(⊙o⊙)</h2><p>+<a id="more"></a><br>在介绍选择器之前，首先介绍一下css的引入方式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## css引入方式</span></div><div class="line"></div><div class="line">* 行间样式引入：</div><div class="line">	* 优点：可以直接给当前标签设置样式</div><div class="line">	* 缺点：代码不能复用，会出现很大冗余</div><div class="line"></div><div class="line">* 头部引入</div><div class="line">	* 优点：实现了HTML和CSS的分离，减少代码冗余，请求数比较少</div><div class="line">	* 缺点：没有完全解决代码冗余</div><div class="line"></div><div class="line">* 外部引入</div><div class="line">	* 优点：实现了HTML和CSS的分离，减少代码冗余，不同HTML可以共用一个CSS样式</div><div class="line">	* 缺点：未完全解决代码冗余</div></pre></td></tr></table></figure>
-<h2 id="六种选择器"><a href="#六种选择器" class="headerlink" title="六种选择器"></a>六种选择器</h2><p>(1)标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。</p>
-<p>====&gt;&gt; 标签名 + {}</p>
-<p>(2)ID选择器 ：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID</p>
-<p>====&gt;&gt; #+ID名+{}</p>
-<p>(3)类选择器 ：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）</p>
-<p>====&gt;&gt; .class+{}</p>
-<p>(4)后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式,后代选择器可以隔层</p>
-<p>====&gt;&gt; </p>
+<h2 id="css引入方式"><a href="#css引入方式" class="headerlink" title="css引入方式"></a>css引入方式</h2><ul>
+<li><p>行间样式引入：</p>
+<ul>
+<li>优点：可以直接给当前标签设置样式</li>
+<li>缺点：代码不能复用，会出现很大冗余</li>
+</ul>
+</li>
+<li><p>头部引入</p>
+<ul>
+<li>优点：实现了HTML和CSS的分离，减少代码冗余，请求数比较少</li>
+<li>缺点：没有完全解决代码冗余</li>
+</ul>
+</li>
+<li><p>外部引入</p>
+<ul>
+<li>优点：实现了HTML和CSS的分离，减少代码冗余，不同HTML可以共用一个CSS样式</li>
+<li>缺点：未完全解决代码冗余</li>
+</ul>
+</li>
+</ul>
+<h2 id="六种选择器"><a href="#六种选择器" class="headerlink" title="六种选择器"></a>六种选择器</h2><h4 id="1-标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。"><a href="#1-标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。" class="headerlink" title="(1)标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。"></a>(1)标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。</h4><p>====&gt;&gt; 标签名 + {}</p>
+<h4 id="2-ID选择器-：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID"><a href="#2-ID选择器-：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID" class="headerlink" title="(2)ID选择器 ：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID"></a>(2)ID选择器 ：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID</h4><p>====&gt;&gt; #+ID名+{}</p>
+<h4 id="3-类选择器-：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）"><a href="#3-类选择器-：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）" class="headerlink" title="(3)类选择器 ：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）"></a>(3)类选择器 ：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）</h4><p>====&gt;&gt; .class+{}</p>
+<h4 id="4-后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式-后代选择器可以隔层"><a href="#4-后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式-后代选择器可以隔层" class="headerlink" title="(4)后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式,后代选择器可以隔层"></a>(4)后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式,后代选择器可以隔层</h4><p>====&gt;&gt; </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div div&#123;</div><div class="line">	width:100px;</div><div class="line">&#125;</div><div class="line">div h1&#123;</div><div class="line">	background:blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>(5)群组选择器 :相当于同时给多个选择器设置样式，写法：多个选择器之间用英文逗号隔开</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">#text,#test&#123;</span></div><div class="line">		width:200px;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line">(6)通配选择器：范围最广</div><div class="line"></div><div class="line">```bash</div><div class="line">	*&#123;</div><div class="line">		margin:0;</div><div class="line">		padding:0;</div><div class="line">		background:green;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line"><span class="comment">## 注意</span></div><div class="line"></div><div class="line"><span class="comment">### 多个选择器之间的样式重复后，会议优先级高的样式来显示，优先级是根据选择器的权值决定的</span></div><div class="line"></div><div class="line">权值越高，优先级越高</div><div class="line"></div><div class="line">```bash</div><div class="line">	通配选择器      0</div><div class="line">	1.标签选择器    1</div><div class="line">	2.类选择器      10</div><div class="line">	3.ID选择器     100</div><div class="line">	4.style选择器  1000</div><div class="line">	5.!important  10000</div><div class="line">	后代选择器：权值相加(不同级的选择器不能相加比较)</div><div class="line">	权值相等 ，后面覆盖前面</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">#text,#test&#123;</span></div><div class="line">		width:200px;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line">(6)通配选择器：范围最广</div><div class="line"></div><div class="line">```bash</div><div class="line">	*&#123;</div><div class="line">		margin:0;</div><div class="line">		padding:0;</div><div class="line">		background:green;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line"><span class="comment">## 注意</span></div><div class="line"></div><div class="line">多个选择器之间的样式重复后，会议优先级高的样式来显示，优先级是根据选择器的权值决定的</div><div class="line"></div><div class="line">权值越高，优先级越高</div><div class="line"></div><div class="line">```bash</div><div class="line">	通配选择器      0</div><div class="line">	1.标签选择器    1</div><div class="line">	2.类选择器      10</div><div class="line">	3.ID选择器     100</div><div class="line">	4.style选择器  1000</div><div class="line">	5.!important  10000</div><div class="line">	后代选择器：权值相加(不同级的选择器不能相加比较)</div><div class="line">	权值相等 ，后面覆盖前面</div></pre></td></tr></table></figure>
 
       
     </div>
