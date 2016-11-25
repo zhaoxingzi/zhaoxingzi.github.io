@@ -3,27 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>First —— 博客初体验 | zxz&amp;&amp;hsm</title>
+  <title>css中的选择器类型 | zxz&amp;&amp;hsm</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Github–从开始到现在
-the end">
+  <meta name="description" content="hello,html + css 更配哦(⊙o⊙)+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First —— 博客初体验">
-<meta property="og:url" content="http://yoursite.com/2016/06/01/First-——-博客初体验/index.html">
+<meta property="og:title" content="css中的选择器类型">
+<meta property="og:url" content="http://yoursite.com/2016/06/05/css中的选择器类型/index.html">
 <meta property="og:site_name" content="zxz&&hsm">
-<meta property="og:description" content="Github–从开始到现在
-the end">
-<meta property="og:image" content="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&fm=21&gp=0.jpg">
-<meta property="og:updated_time" content="2016-11-16T13:48:22.000Z">
+<meta property="og:description" content="hello,html + css 更配哦(⊙o⊙)+">
+<meta property="og:updated_time" content="2016-11-25T12:29:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First —— 博客初体验">
-<meta name="twitter:description" content="Github–从开始到现在
-the end">
-<meta name="twitter:image" content="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&fm=21&gp=0.jpg">
+<meta name="twitter:title" content="css中的选择器类型">
+<meta name="twitter:description" content="hello,html + css 更配哦(⊙o⊙)+">
   
     <link rel="alternative" href="/atom.xml" title="zxz&amp;&amp;hsm" type="application/atom+xml">
   
@@ -212,11 +207,11 @@ the end">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-First-——-博客初体验" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-css中的选择器类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/01/First-——-博客初体验/" class="article-date">
-  	<time datetime="2016-06-01T08:28:27.000Z" itemprop="datePublished">2016-06-01</time>
+      <a href="/2016/06/05/css中的选择器类型/" class="article-date">
+  	<time datetime="2016-06-05T12:49:20.000Z" itemprop="datePublished">2016-06-05</time>
 </a>
     </div>
   
@@ -229,7 +224,7 @@ the end">
         
   
     <h1 class="article-title" itemprop="name">
-      First —— 博客初体验
+      css中的选择器类型
       
     </h1>
   
@@ -238,7 +233,15 @@ the end">
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/选择器/">选择器</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/css/">css</a>
+	</div>
+
 
         
         <div class="clearfix"></div>
@@ -247,8 +250,35 @@ the end">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Github–从开始到现在"><a href="#Github–从开始到现在" class="headerlink" title="Github–从开始到现在"></a>Github–从开始到现在</h1><p><img src="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&amp;fm=21&amp;gp=0.jpg" alt="Mou icon"></p>
-<h2 id="the-end"><a href="#the-end" class="headerlink" title="the end"></a>the end</h2>
+        <h2 id="hello-html-css-更配哦-⊙o⊙"><a href="#hello-html-css-更配哦-⊙o⊙" class="headerlink" title="hello,html + css 更配哦(⊙o⊙)"></a>hello,html + css 更配哦(⊙o⊙)</h2><p>+<a id="more"></a><br>在介绍选择器之前，首先介绍一下css的引入方式</p>
+<h2 id="css引入方式"><a href="#css引入方式" class="headerlink" title="css引入方式"></a>css引入方式</h2><ul>
+<li><p>行间样式引入：</p>
+<ul>
+<li>优点：可以直接给当前标签设置样式</li>
+<li>缺点：代码不能复用，会出现很大冗余</li>
+</ul>
+</li>
+<li><p>头部引入</p>
+<ul>
+<li>优点：实现了HTML和CSS的分离，减少代码冗余，请求数比较少</li>
+<li>缺点：没有完全解决代码冗余</li>
+</ul>
+</li>
+<li><p>外部引入</p>
+<ul>
+<li>优点：实现了HTML和CSS的分离，减少代码冗余，不同HTML可以共用一个CSS样式</li>
+<li>缺点：未完全解决代码冗余</li>
+</ul>
+</li>
+</ul>
+<h2 id="六种选择器"><a href="#六种选择器" class="headerlink" title="六种选择器"></a>六种选择器</h2><h4 id="1-标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。"><a href="#1-标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。" class="headerlink" title="(1)标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。"></a>(1)标签选择器：可以给所有以这个标签名命名的标签添加样式，一般用于重置默认属性。</h4><p>====&gt;&gt; 标签名 + {}</p>
+<h4 id="2-ID选择器-：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID"><a href="#2-ID选择器-：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID" class="headerlink" title="(2)ID选择器 ：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID"></a>(2)ID选择器 ：给标签设置一个ID熟悉并给他赋值，ID名不要重复一个ID只能被一个标签使用，一个标签也只能使用一个ID</h4><p>====&gt;&gt; #+ID名+{}</p>
+<h4 id="3-类选择器-：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）"><a href="#3-类选择器-：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）" class="headerlink" title="(3)类选择器 ：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）"></a>(3)类选择器 ：一个类名更可以被多个标签使用，一个标签也可以使用多个类（可以大量减少代码冗余）</h4><p>====&gt;&gt; .class+{}</p>
+<h4 id="4-后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式-后代选择器可以隔层"><a href="#4-后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式-后代选择器可以隔层" class="headerlink" title="(4)后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式,后代选择器可以隔层"></a>(4)后代选择器：后代选择器是一个结构，所有满足这个顺序结构的标签都会显示这个样式,后代选择器可以隔层</h4><p>====&gt;&gt; </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div div&#123;</div><div class="line">	width:100px;</div><div class="line">&#125;</div><div class="line">div h1&#123;</div><div class="line">	background:blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(5)群组选择器 :相当于同时给多个选择器设置样式，写法：多个选择器之间用英文逗号隔开</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">#text,#test&#123;</span></div><div class="line">		width:200px;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line">(6)通配选择器：范围最广</div><div class="line"></div><div class="line">```bash</div><div class="line">	*&#123;</div><div class="line">		margin:0;</div><div class="line">		padding:0;</div><div class="line">		background:green;</div><div class="line">	&#125;</div><div class="line">```			</div><div class="line"></div><div class="line"><span class="comment">## 注意</span></div><div class="line"></div><div class="line">多个选择器之间的样式重复后，会议优先级高的样式来显示，优先级是根据选择器的权值决定的</div><div class="line"></div><div class="line">权值越高，优先级越高</div><div class="line"></div><div class="line">```bash</div><div class="line">	通配选择器      0</div><div class="line">	1.标签选择器    1</div><div class="line">	2.类选择器      10</div><div class="line">	3.ID选择器     100</div><div class="line">	4.style选择器  1000</div><div class="line">	5.!important  10000</div><div class="line">	后代选择器：权值相加(不同级的选择器不能相加比较)</div><div class="line">	权值相等 ，后面覆盖前面</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -257,15 +287,20 @@ the end">
     
 <nav id="article-nav">
   
-    <a href="/2016/06/03/常用标签及特性/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/08/浮动和定位/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          常用标签及特性
+          浮动和定位
         
       </div>
     </a>
   
+  
+    <a href="/2016/06/03/常用标签及特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用标签及特性</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
   
 </nav>
 
@@ -292,7 +327,7 @@ the end">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="First-——-博客初体验" data-title="First —— 博客初体验" data-url="http://yoursite.com/2016/06/01/First-——-博客初体验/"></div>
+	<div class="ds-thread" data-thread-key="css中的选择器类型" data-title="css中的选择器类型" data-url="http://yoursite.com/2016/06/05/css中的选择器类型/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

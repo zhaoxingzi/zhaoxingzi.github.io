@@ -3,27 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>First —— 博客初体验 | zxz&amp;&amp;hsm</title>
+  <title>浮动和定位 | zxz&amp;&amp;hsm</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Github–从开始到现在
-the end">
+  <meta name="description" content="今天就说说 float 和 position 各自的特点和区别：+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First —— 博客初体验">
-<meta property="og:url" content="http://yoursite.com/2016/06/01/First-——-博客初体验/index.html">
+<meta property="og:title" content="浮动和定位">
+<meta property="og:url" content="http://yoursite.com/2016/06/08/浮动和定位/index.html">
 <meta property="og:site_name" content="zxz&&hsm">
-<meta property="og:description" content="Github–从开始到现在
-the end">
-<meta property="og:image" content="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&fm=21&gp=0.jpg">
-<meta property="og:updated_time" content="2016-11-16T13:48:22.000Z">
+<meta property="og:description" content="今天就说说 float 和 position 各自的特点和区别：+">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/divS.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/divH.png">
+<meta property="og:updated_time" content="2016-11-25T12:41:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First —— 博客初体验">
-<meta name="twitter:description" content="Github–从开始到现在
-the end">
-<meta name="twitter:image" content="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&fm=21&gp=0.jpg">
+<meta name="twitter:title" content="浮动和定位">
+<meta name="twitter:description" content="今天就说说 float 和 position 各自的特点和区别：+">
+<meta name="twitter:image" content=" https://zhaoxingzi.github.io/img/divS.png">
   
     <link rel="alternative" href="/atom.xml" title="zxz&amp;&amp;hsm" type="application/atom+xml">
   
@@ -212,11 +210,11 @@ the end">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-First-——-博客初体验" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-浮动和定位" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/01/First-——-博客初体验/" class="article-date">
-  	<time datetime="2016-06-01T08:28:27.000Z" itemprop="datePublished">2016-06-01</time>
+      <a href="/2016/06/08/浮动和定位/" class="article-date">
+  	<time datetime="2016-06-08T11:07:00.000Z" itemprop="datePublished">2016-06-08</time>
 </a>
     </div>
   
@@ -229,7 +227,7 @@ the end">
         
   
     <h1 class="article-title" itemprop="name">
-      First —— 博客初体验
+      浮动和定位
       
     </h1>
   
@@ -238,7 +236,15 @@ the end">
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/float/">float</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/position/">position</a>
+	</div>
+
 
         
         <div class="clearfix"></div>
@@ -247,8 +253,19 @@ the end">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Github–从开始到现在"><a href="#Github–从开始到现在" class="headerlink" title="Github–从开始到现在"></a>Github–从开始到现在</h1><p><img src="http://img5.imgtn.bdimg.com/it/u=2027999701,4109081762&amp;fm=21&amp;gp=0.jpg" alt="Mou icon"></p>
-<h2 id="the-end"><a href="#the-end" class="headerlink" title="the end"></a>the end</h2>
+        <h2 id="今天就说说-float-和-position-各自的特点和区别："><a href="#今天就说说-float-和-position-各自的特点和区别：" class="headerlink" title="今天就说说 float 和 position 各自的特点和区别："></a>今天就说说 <code>float</code> 和 <code>position</code> 各自的特点和区别：</h2><p>+<a id="more"></a><br>float：元素浮动起来会脱离原来块级或行级的一个排列层面,处于上方,但浮动起来的元素不会脱离文档流;</p>
+<p>首先当我们想让块标签同行显示的时候,虽然可以根据display属性来解决,但是这种方法用着并不是很方便;<br>我一般选择定义块级元素的    <code>float</code>属性，通过 float:left;或float:right;定义块级元素的位置。</p>
+<h2 id="设置3个div元素，让三个同行显示："><a href="#设置3个div元素，让三个同行显示：" class="headerlink" title="设置3个div元素，让三个同行显示："></a>设置3个div元素，让三个同行显示：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.div1&#123;width:100px;height:100px;background:red;<span class="built_in">float</span>:left;&#125;</div><div class="line">.div2&#123;width:100px;height:100px;background:blue;<span class="built_in">float</span>:left;&#125;</div><div class="line">.div3&#123;width:100px;height:100px;background:pink;<span class="built_in">float</span>:left;&#125;</div></pre></td></tr></table></figure>
+<p>(1) 没有给float之前<br><img src=" https://zhaoxingzi.github.io/img/divS.png"></p>
+<p>(2) float之后<br><img src=" https://zhaoxingzi.github.io/img/divH.png"></p>
+<h2 id="float的特点"><a href="#float的特点" class="headerlink" title="float的特点"></a>float的特点</h2><p>1、可以让元素浮动起来，浮动起来的元素排列方式不是按照块级和行级的特性来。<br>2、浮动起来的元素会脱离原来块级或行级的一个排列层面，处于上方。<br>3、浮动的元素left会从左向右排列，一旦元素放不下，就会换行<br>4、块级元素浮动起来之后不再默认继承父级的宽度。<br>5、行级元素浮动之后可以设置宽高<br>6、子级元素浮动之后，父级检测不到内容。解决这个问题可以用清除浮动</p>
+<h2 id="浮动的元素可以让我们的布局变得简单，同时又会出现一些其他的问题，解决这种问题就叫：清除浮动"><a href="#浮动的元素可以让我们的布局变得简单，同时又会出现一些其他的问题，解决这种问题就叫：清除浮动" class="headerlink" title="浮动的元素可以让我们的布局变得简单，同时又会出现一些其他的问题，解决这种问题就叫：清除浮动"></a>浮动的元素可以让我们的布局变得简单，同时又会出现一些其他的问题，解决这种问题就叫：清除浮动</h2><p>1）给父级手动添加高度<br>2）给父级添加overflow：hidden<br>3）给浮动的元素添加一个同级的标签，在标签内写clear：both；<br>4）给父级添加一个after的伪类，在父级：after内写<br>            {<br>            content:”.”;<br>            visibility:hidden;<br>            display:block;<br>            clear:both;}</p>
+<h2 id="position-定位"><a href="#position-定位" class="headerlink" title="position 定位"></a>position 定位</h2><p>position :可以称为完全脱离文档流，它的层级要比float和文字层的层级高，并且可以覆盖文字。<br>定位之后的元素也不会有默认宽度，定位之后的元素的父级也检测不到定位元素的存在。</p>
+<p>position有以下几个属性值：</p>
+<pre><code>* relative:相对于自身的定位
+* absolute：绝对定位，相对带有position父级的一个定位。
+</code></pre><p>其中：absolute定位的时候会找带有 position属性的父级或者父父级（一直在网上找），<br>     然后以带有position的父(父级)来定位，如果都没有position属性，则以左上角来定位。<br>     position属性可以设置top、left、bottom 、right。只有写了的方向才会生效。</p>
+
       
     </div>
     
@@ -257,15 +274,20 @@ the end">
     
 <nav id="article-nav">
   
-    <a href="/2016/06/03/常用标签及特性/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/10/渐变 过渡 倒影/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">&lt;</strong>
       <div class="article-nav-title">
         
-          常用标签及特性
+          渐变 过渡 倒影
         
       </div>
     </a>
   
+  
+    <a href="/2016/06/05/css中的选择器类型/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css中的选择器类型</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
   
 </nav>
 
@@ -292,7 +314,7 @@ the end">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="First-——-博客初体验" data-title="First —— 博客初体验" data-url="http://yoursite.com/2016/06/01/First-——-博客初体验/"></div>
+	<div class="ds-thread" data-thread-key="浮动和定位" data-title="浮动和定位" data-url="http://yoursite.com/2016/06/08/浮动和定位/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
