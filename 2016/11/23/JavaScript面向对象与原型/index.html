@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaScript面向对象与原型 | zxz&amp;&amp;hsm</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript面向对象与原型">
+<meta property="og:url" content="http://yoursite.com/2016/11/23/JavaScript面向对象与原型/index.html">
+<meta property="og:site_name" content="zxz&&hsm">
+<meta property="og:description" content="+">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/js.png">
+<meta property="og:image" content=" https://zhaoxingzi.github.io/img/js1.png">
+<meta property="og:updated_time" content="2016-11-26T11:56:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript面向对象与原型">
+<meta name="twitter:description" content="+">
+<meta name="twitter:image" content=" https://zhaoxingzi.github.io/img/js.png">
+  
+    <link rel="alternative" href="/atom.xml" title="zxz&amp;&amp;hsm" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">KiKi</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">你在桥上看风景，看风景的人在桥下看你！！！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/show">我的项目</a></li>
+				        
+							<li><a href="/archives">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qpiZmpqSm5yak5nq29uEycXH" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="#" title="qq">qq</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/6020139279?refer_flag=1005050005_&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS-基本知识/" style="font-size: 10px;">CSS 基本知识</a> <a href="/tags/float/" style="font-size: 10px;">float</a> <a href="/tags/jpages/" style="font-size: 10px;">jpages</a> <a href="/tags/web前端/" style="font-size: 10px;">web前端</a> <a href="/tags/动画/" style="font-size: 10px;">动画</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/选择器/" style="font-size: 10px;">选择器</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://lidaolin.github.io">霖霖霖</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zhoushujuan.github.io">周书娟</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更想找个男朋友</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">KiKi</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">KiKi</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">你在桥上看风景，看风景的人在桥下看你！！！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/show">我的项目</a></li>
+		        
+					<li><a href="/archives">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qpiZmpqSm5yak5nq29uEycXH" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="#" title="qq">qq</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/6020139279?refer_flag=1005050005_&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-JavaScript面向对象与原型" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/23/JavaScript面向对象与原型/" class="article-date">
+  	<time datetime="2016-11-23T11:16:41.000Z" itemprop="datePublished">2016-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript面向对象与原型
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>+<a id="more"></a></p>
+<h2 id="工厂模式：无法识别对象"><a href="#工厂模式：无法识别对象" class="headerlink" title="工厂模式：无法识别对象"></a>工厂模式：无法识别对象</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> createObject(name, age) &#123; //集中实例化的函数</div><div class="line">　　var obj = new Object();</div><div class="line">　　obj.name = name;</div><div class="line">　　obj.age = age;</div><div class="line">　　obj.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">　　&#125;;</div><div class="line">　　<span class="built_in">return</span> obj;</div><div class="line">&#125;</div><div class="line">var box1 = createObject(<span class="string">'Lee'</span>, 100); //第一个实例</div><div class="line">var box2 = createObject(<span class="string">'Jack'</span>, 200); //第二个实例</div><div class="line">alert(box1.run());</div><div class="line">alert(box2.run()); //保持独立</div><div class="line"></div><div class="line">alert(typeof box1); //Object</div><div class="line">alert(box1 instanceof Object); //<span class="literal">true</span></div></pre></td></tr></table></figure>
+<h2 id="构造函数-构造方法-：可以识别对象"><a href="#构造函数-构造方法-：可以识别对象" class="headerlink" title="构造函数(构造方法)：可以识别对象"></a>构造函数(构造方法)：可以识别对象</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(name, age) &#123; //构造函数模式</div><div class="line">　　this.name = name;</div><div class="line">　　this.age = age;</div><div class="line">　　this.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">　　&#125;;</div><div class="line">&#125;</div><div class="line">var box1 = new Box(<span class="string">'Lee'</span>, 100); //new Box()即可</div><div class="line">var box2 = new Box(<span class="string">'Jack'</span>, 200);</div><div class="line"></div><div class="line">alert(box1.run());</div><div class="line">alert(box1 instanceof Box); //很清晰的识别他从属于 Box</div></pre></td></tr></table></figure>
+<h2 id="构造函数的方法有一些规范："><a href="#构造函数的方法有一些规范：" class="headerlink" title="构造函数的方法有一些规范："></a>构造函数的方法有一些规范：</h2><p>1.函数名和实例化构造名相同且大写，(PS：非强制，但这么写有助于区分构造函数和普通函数)；</p>
+<p>2.通过构造函数创建对象，必须使用 new 运算符。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = new Object();</div><div class="line">Box.call(o, <span class="string">'Jack'</span>, 200) //对象冒充调用</div><div class="line">alert(o.run());</div></pre></td></tr></table></figure>
+<p>原型（共享）：创建的每个函数都有一个 prototype(原型)属性，这个属性是一个对象，它的用途是包含可以由特定类型的所有实例共享的属性和方法。逻辑上可以这么理解：prototype 通过调用构造函数而创建的那个对象的原型对象。使用原型的好处可以让所有对象实例共享它所包含的属性和方法。也就是说，不必在构造函数中定义对象信息，而是可以直接将这些信息添加到原型中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">unction <span class="function"><span class="title">Box</span></span>() &#123;&#125; //声明一个构造函数</div><div class="line">Box.prototype.name = <span class="string">'Lee'</span>; //在原型里添加属性</div><div class="line">Box.prototype.age = 100;</div><div class="line">Box.prototype.run = <span class="function"><span class="title">function</span></span> () &#123; //在原型里添加方法</div><div class="line">　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><img src=" https://zhaoxingzi.github.io/img/js.png"></p>
+<p>在原型模式声明中，多了两个属性，这两个属性都是创建对象时自动生成的。</p>
+<p><strong>proto</strong>属性：是实例指向原型对象的一个指针，它的作用就是指向构造函数的原型属性 constructor 。通过这两个属性，就可以访问到原型里的属性和方法了。</p>
+<p>PS：IE 浏览器在脚本访问<strong>proto</strong>会不能识别，火狐和谷歌浏览器及其他某些浏览器均能识别。虽然可以输出，但无法获取内部信息。</p>
+<p>判断一个对象是否指向了该构造函数的原型对象，可以使用 isPrototypeOf()方法来测试。</p>
+<p>exp：alert(Box.prototype.isPrototypeOf(box)); //只要实例化对象，即都会指向</p>
+<h2 id="原型模式的执行流程："><a href="#原型模式的执行流程：" class="headerlink" title="原型模式的执行流程："></a>原型模式的执行流程：</h2><p>1.先查找构造函数实例里的属性或方法，如果有，立刻返回；<br>2.如果构造函数实例里没有，则去它的原型对象里找，如果有，就返回；</p>
+<p>虽然我们可以通过对象实例访问保存在原型中的值，但却不能访问通过对象实例重写原型中的值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var box1 = new Box();</div><div class="line">alert(box1.name); //Lee，原型里的值</div><div class="line">box1.name = <span class="string">'Jack'</span>;</div><div class="line">alert(box.1name); //Jack，就近原则，</div><div class="line">var box2 = new Box();</div><div class="line">alert(box2.name); //Lee，原型里的值，没有被 box1 修改</div><div class="line">如果想要 box1 也能在后面继续访问到原型里的值，可以把构造函数里的属性删除即可 ，具体如下：</div><div class="line">delete box1.name; //删除属性</div><div class="line">alert(box1.name);</div><div class="line">如何判断属性是在构造函数的实例里，还是在原型里？可以使用 hasOwnProperty()函数来验证：</div><div class="line"></div><div class="line">alert(box.hasOwnProperty(<span class="string">'name'</span>)); //实例里有返回 <span class="literal">true</span>，否则返回 <span class="literal">false</span></div></pre></td></tr></table></figure>
+<p>in 操作符会在通过对象能够访问给定属性时返回 true，无论该属性存在于实例中还是原型中。<br>alert(‘name’ in box); //true，存在实例中或原型中<br>我们可以通过 hasOwnProperty()方法检测属性是否存在实例中，也可以通过 in 来判断实例或原型中是否存在属性。那么结合这两种方法，可以判断原型中是否存在属性。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> isProperty(object, property) &#123; //判断原型中是否存在属性</div><div class="line">　　<span class="built_in">return</span> !object.hasOwnProperty(property) &amp;&amp; (property <span class="keyword">in</span> object);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var box = new Box();</div><div class="line">alert(isProperty(box, <span class="string">'name'</span>)) //<span class="literal">true</span>，如果原型有</div></pre></td></tr></table></figure>
+<p>为了让属性和方法更好的体现封装的效果，并且减少不必要的输入，原型的创建可以使用字面量的方式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Box</span></span>() &#123;&#125;;</div><div class="line">Box.prototype = &#123; //使用字面量的方式</div><div class="line">　　name : <span class="string">'Lee'</span>,</div><div class="line">　　age : 100,</div><div class="line">　　run : <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">　　&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>使用构造函数创建原型对象和使用字面量创建对象在使用上基本相同，但还是有一些区别，字面量创建的方式使用 constructor 属性不会指向实例，而会指向 Object，构造函数创建的方式则相反。</p>
+<p>如果想让字面量方式的 constructor 指向实例对象，那么可以这么做：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Box.prototype = &#123;</div><div class="line">　　constructor : Box, //直接强制指向即可</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>原型对象不仅仅可以在自定义对象的情况下使用，而 ECMAScript 内置的引用类型都可以使用这种方式，并且内置的引用类型本身也使用了原型。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">alert(Array.prototype.sort); //sort 就是 Array 类型的原型方法</div><div class="line">alert(String.prototype.substring); //substring 就是 String 类型的原型方法</div><div class="line">String.prototype.addstring = <span class="function"><span class="title">function</span></span> () &#123; //给 String 类型添加一个方法</div><div class="line">　　<span class="built_in">return</span> this + <span class="string">'，被添加了！'</span>; //this 代表调用的字符串</div><div class="line">&#125;;</div><div class="line">alert(<span class="string">'Lee'</span>.addstring()); //使用这个方法</div></pre></td></tr></table></figure>
+<p>PS：尽管给原生的内置引用类型添加方法使用起来特别方便，但我们不推荐使用这种方法。因为它可能会导致命名冲突，不利于代码维护。</p>
+<h2 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(name ,age) &#123; //将所有信息封装到函数体内</div><div class="line">　　this.name = name;</div><div class="line">　　this.age = age;</div><div class="line">　　<span class="keyword">if</span> (typeof this.run != <span class="string">'function'</span>) &#123; //仅在第一次调用的初始化</div><div class="line">　　　　Box.prototype.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">　　　　&#125;;</div><div class="line">　　&#125;</div><div class="line">&#125;</div><div class="line">var box = new Box(<span class="string">'Lee'</span>, 100);</div><div class="line">alert(box.run());</div></pre></td></tr></table></figure>
+<p>PS：使用动态原型模式，要注意一点，不可以再使用字面量的方式重写原型，因为会切断实例和新原型之间的联系。</p>
+<h2 id="寄生构造函数"><a href="#寄生构造函数" class="headerlink" title="寄生构造函数"></a>寄生构造函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(name, age) &#123;</div><div class="line">　　var obj = new Object();</div><div class="line">　　obj.name = name;</div><div class="line">　　obj.age = age;</div><div class="line">　　obj.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　<span class="built_in">return</span> this.name + this.age + <span class="string">'运行中...'</span>;</div><div class="line">　　&#125;;</div><div class="line">　　<span class="built_in">return</span> obj;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="稳妥构造函数"><a href="#稳妥构造函数" class="headerlink" title="稳妥构造函数"></a>稳妥构造函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(name , age) &#123;</div><div class="line">　　var obj = new Object();</div><div class="line">　　obj.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　　　<span class="built_in">return</span> name + age + <span class="string">'运行中...'</span>; //直接打印参数即可</div><div class="line">　　&#125;;</div><div class="line">　　<span class="built_in">return</span> obj;</div><div class="line">&#125;</div><div class="line">var box = Box(<span class="string">'Lee'</span>, 100); //直接调用函数</div><div class="line">alert(box.run());</div></pre></td></tr></table></figure>
+<h2 id="继承：依靠原型链完成"><a href="#继承：依靠原型链完成" class="headerlink" title="继承：依靠原型链完成"></a>继承：依靠原型链完成</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Box</span></span>() &#123; //Box 构造</div><div class="line">　　this.name = <span class="string">'Lee'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Desk</span></span>() &#123; //Desk 构造</div><div class="line">　　this.age = 100;</div><div class="line">&#125;</div><div class="line">Desk.prototype = new Box(); //Desc 继承了 Box，通过原型，形成链条</div><div class="line">var desk = new Desk();</div><div class="line">alert(desk.age);</div><div class="line">alert(desk.name); //得到被继承的属性</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Table</span></span>() &#123; //Table 构造</div><div class="line">　　this.level = <span class="string">'AAAAA'</span>;</div><div class="line">&#125;</div><div class="line">Table.prototype = new Desk(); //继续原型链继承</div><div class="line">var table = new Table();</div><div class="line">alert(table.name); //继承了 Box 和 Desk</div></pre></td></tr></table></figure>
+<p><img src=" https://zhaoxingzi.github.io/img/js1.png"></p>
+<p>在 JavaScript 里，被继承的函数称为超类型(父类，基类也行，其他语言叫法)，继承的函数称为子类型(子类，派生类)。继承也有之前问题，比如字面量重写原型会中断关系，使用引用类型的原型，并且子类型还无法给超类型传递参数。</p>
+<h2 id="对象冒充-伪造对象、经典继承、借用构造函数-：解决引用共享和超类型无法传参的问题"><a href="#对象冒充-伪造对象、经典继承、借用构造函数-：解决引用共享和超类型无法传参的问题" class="headerlink" title="对象冒充(伪造对象、经典继承、借用构造函数)：解决引用共享和超类型无法传参的问题"></a>对象冒充(伪造对象、经典继承、借用构造函数)：解决引用共享和超类型无法传参的问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(age) &#123;</div><div class="line">　　this.name = [<span class="string">'Lee'</span>, <span class="string">'Jack'</span>, <span class="string">'Hello'</span>]</div><div class="line">　　this.age = age;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> Desk(age) &#123;</div><div class="line">　　Box.call(this, age); //对象冒充，给超类型传参</div><div class="line"></div><div class="line">&#125;</div><div class="line">var desk = new Desk(200);</div><div class="line">alert(desk.age);</div><div class="line">alert(desk.name);</div><div class="line">desk.name.push(<span class="string">'AAA'</span>); //添加的新数据，只给 desk</div><div class="line">alert(desk.name);</div></pre></td></tr></table></figure>
+<h2 id="组合继承：原型链-借用构造函数"><a href="#组合继承：原型链-借用构造函数" class="headerlink" title="组合继承：原型链+ 借用构造函数"></a>组合继承：原型链+ 借用构造函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Box(age) &#123;</div><div class="line">　　this.name = [<span class="string">'Lee'</span>, <span class="string">'Jack'</span>, <span class="string">'Hello'</span>]</div><div class="line">　　this.age = age;</div><div class="line">&#125;</div><div class="line">Box.prototype.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　<span class="built_in">return</span> this.name + this.age;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">function</span> Desk(age) &#123;</div><div class="line">　　Box.call(this, age); //对象冒充</div><div class="line">&#125;</div><div class="line">Desk.prototype = new Box(); //原型链继承</div><div class="line">var desk = new Desk(100);</div><div class="line">alert(desk.run());</div></pre></td></tr></table></figure>
+<h2 id="寄生组合继承"><a href="#寄生组合继承" class="headerlink" title="寄生组合继承"></a>寄生组合继承</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> obj(o) &#123;     //传递一个字面量函数</div><div class="line">　　<span class="keyword">function</span> <span class="function"><span class="title">F</span></span>() &#123;&#125;    //临时新建一个构造函数，用来存储传递进来的对象</div><div class="line">　　F.prototype = o;    //将o对象实例赋值给F构造的原型对象</div><div class="line"></div><div class="line">　　<span class="built_in">return</span> new F();    //返回实例化后的构造函数</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> create(box, desk) &#123;</div><div class="line">　　var f = obj(box.prototype);</div><div class="line">　　f.constructor = desk;</div><div class="line">　　desk.prototype = f;</div><div class="line">&#125;</div><div class="line"><span class="keyword">function</span> Box(name) &#123;</div><div class="line">　　this.name = name;</div><div class="line">　　this.arr = [<span class="string">'哥哥'</span>,<span class="string">'妹妹'</span>,<span class="string">'父母'</span>];</div><div class="line">&#125;</div><div class="line">Box.prototype.run = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">　　<span class="built_in">return</span> this.name;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">function</span> Desk(name, age) &#123;</div><div class="line">　　Box.call(this, name);</div><div class="line">　　this.age = age;</div><div class="line">&#125;</div><div class="line"><span class="keyword">in</span>Prototype(Box, Desk); //通过这里实现继承</div><div class="line">var desk = new Desk(<span class="string">'Lee'</span>,100);</div><div class="line">desk.arr.push(<span class="string">'姐姐'</span>);</div><div class="line">alert(desk.arr);</div><div class="line">alert(desk.run()); //只共享了方法</div><div class="line">var desk2 = new Desk(<span class="string">'Jack'</span>, 200);</div><div class="line">alert(desk2.arr); //引用问题解决</div></pre></td></tr></table></figure>
+<button><br> 本文转载: <a href="http://www.cnblogs.com/sctnl/p/6086121.html" target="_blank" rel="external">http://www.cnblogs.com/sctnl/p/6086121.html</a><br></button>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/21/关于web前端的学习路线/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于web前端的学习路线</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript面向对象与原型" data-title="JavaScript面向对象与原型" data-url="http://yoursite.com/2016/11/23/JavaScript面向对象与原型/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 KiKi
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
