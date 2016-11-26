@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="data.js"></script>
+	<style>
+
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+		}
+		#box{
+			position:relative;
+		}
+		#box li{
+			position: absolute;
+			border:1px solid #ccc;
+			left:0;
+			top:0;
+		}
+		li { 
+			-webkit-transition: all .7s ease-out .1s; 
+			-moz-transition: all .7s ease-out; 
+			-o-transition: all .7s ease-out .1s; 
+			transition: all .7s ease-out .1s 
+		}
+	</style>
+</head>
+<body>
+	<ul id="box">
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+		<li><img src="img/16.png"></li>
+	</ul>
+</body>
+</html>
+<script src="index.js"></script>
+<script>
+	var margin = 20;			//这里设置间距
+	var li=$("li");				//这里是区块名称
+	var li_W = li[0].offsetWidth+margin;	//取区块的实际宽度,包含间距
+	function pull(){  
+	    var h=[];       //记录区块高度的数组
+	    var n = document.documentElement.offsetWidth/li_W|0;  //窗口的宽度除以区块宽度就是一行能放几个区块
+	    for(var i = 0;i < li.length;i++) {
+	        li_H = li[i].offsetHeight;
+	        if(i < n) {   //n是一行最多的li，所以小于n就是第一行了
+	            h[i]=li_H;   //把每个li放到数组里面
+	            li.eq(i).css("top",0);   //第一行的Li的top值为0
+	            li.eq(i).css("left",i * li_W);   //第i个li的左坐标就是i*li的宽度
+	        }
+	        else{
+	            min_H =Math.min.apply(null,h) ;    //取得数组中的最小值，区块中高度值最小的那个
+	            minKey = getarraykey(h,min_H);   //最小的值对应的指针
+	            h[minKey] += li_H+margin ;     //加上新高度后更新高度值
+	            li.eq(i).css("top",min_H+margin);   //先得到高度最小的Li，然后把接下来的li放到它的下面
+	            li.eq(i).css("left",minKey * li_W);  //第i个li的左坐标就是i*li的宽度
+	        }
+	    }
+	}
+	/* 使用for in运算返回数组中某一值的对应项数(比如算出最小的高度值是数组里面的第几个) */
+	function getarraykey(s, v) {
+		for(k in s) {
+			if(s[k] == v) {
+				return k;
+			}
+		}
+	}
+	/*这里一定要用onload，因为图片不加载完就不知道高度值*/
+	window.onload = function() {
+		pull();
+	}
+	/*浏览器窗口改变时也运行函数*/
+	window.onresize = function() {
+		pull();
+	}
+</script>
