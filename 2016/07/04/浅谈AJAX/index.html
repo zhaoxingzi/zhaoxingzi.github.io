@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/04/浅谈AJAX/index.html">
 <meta property="og:site_name" content="zxz&&hsm">
 <meta property="og:description" content="+">
-<meta property="og:updated_time" content="2016-11-26T11:08:32.000Z">
+<meta property="og:updated_time" content="2016-11-26T11:10:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈AJAX">
 <meta name="twitter:description" content="+">
@@ -243,28 +243,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>+<a id="more"></a></p>
-<p>#什么是ajax？</p>
-<p>AJAX = 异步 JavaScript 和 XML。</p>
+<h1 id="什么是ajax？"><a href="#什么是ajax？" class="headerlink" title="什么是ajax？"></a>什么是ajax？</h1><p>AJAX = 异步 JavaScript 和 XML。</p>
 <p>AJAX 是一种用于创建快速动态网页的技术。</p>
 <p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
-<p>#ajax的请求步骤</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> AJax(<span class="built_in">type</span>,url,parm,callback)&#123;</div><div class="line">		<span class="keyword">if</span>(<span class="built_in">type</span> === <span class="string">"GET"</span>)&#123;</div><div class="line">			 //创建异步对象</div><div class="line">			var xhr = new XMLHttpRequest();</div><div class="line"></div><div class="line">			//发送get请求</div><div class="line">			xhr.open(<span class="built_in">type</span>,url);</div><div class="line"></div><div class="line">			//发送请求</div><div class="line">			xhr.send();</div><div class="line"></div><div class="line">			 //检测服务器是否把数据返回</div><div class="line">			xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				<span class="keyword">if</span>(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</div><div class="line">					var data = xhr.responseText;</div><div class="line">					callback(data);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			var xhr = new XMLHttpRequest();</div><div class="line">			xhr.open(<span class="built_in">type</span>,url);</div><div class="line">			xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">			xhr.send(parm);</div><div class="line">			xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				<span class="keyword">if</span>(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</div><div class="line">					var data = xhr.responseText;</div><div class="line">					</div><div class="line">					callback(data);</div><div class="line">				&#125;</div><div class="line">			&#125;	</div><div class="line">		&#125;	</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p>#ajax的5种工作状态</p>
-<p>readyState：从 0 到 4 发生变化。</p>
+<h2 id="ajax的请求步骤"><a href="#ajax的请求步骤" class="headerlink" title="ajax的请求步骤"></a>ajax的请求步骤</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> AJax(<span class="built_in">type</span>,url,parm,callback)&#123;</div><div class="line">		<span class="keyword">if</span>(<span class="built_in">type</span> === <span class="string">"GET"</span>)&#123;</div><div class="line">			 //创建异步对象</div><div class="line">			var xhr = new XMLHttpRequest();</div><div class="line"></div><div class="line">			//发送get请求</div><div class="line">			xhr.open(<span class="built_in">type</span>,url);</div><div class="line"></div><div class="line">			//发送请求</div><div class="line">			xhr.send();</div><div class="line"></div><div class="line">			 //检测服务器是否把数据返回</div><div class="line">			xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				<span class="keyword">if</span>(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</div><div class="line">					var data = xhr.responseText;</div><div class="line">					callback(data);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			var xhr = new XMLHttpRequest();</div><div class="line">			xhr.open(<span class="built_in">type</span>,url);</div><div class="line">			xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">			xhr.send(parm);</div><div class="line">			xhr.onreadystatechange = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">				<span class="keyword">if</span>(xhr.readyState === 4 &amp;&amp; xhr.status === 200)&#123;</div><div class="line">					var data = xhr.responseText;</div><div class="line">					</div><div class="line">					callback(data);</div><div class="line">				&#125;</div><div class="line">			&#125;	</div><div class="line">		&#125;	</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="ajax的5种工作状态"><a href="#ajax的5种工作状态" class="headerlink" title="ajax的5种工作状态"></a>ajax的5种工作状态</h2><p>readyState：从 0 到 4 发生变化。</p>
 <p>0（未初始化）对象已经创建，但是尚未初始化，还没调用open方法。</p>
 <p>1（初始化）对象已经初始化，并且调用open方法，但还未调用send方法。</p>
 <p>2（发送数据）调用send方法，但是正在等待状态码和头的返回。</p>
 <p>3（正在接收）已经接收部分数据，因为响应和http头不完整，所以还不能使用该对象的属性和方法。</p>
 <p>4（完成）数据接收完成，此时可以通过responseText和responseXML获取完整的响应数据。</p>
-<p>#http状态码</p>
-<p>http状态码由三位数构成，首位数字定义了状态码的类型。</p>
+<h2 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h2><p>http状态码由三位数构成，首位数字定义了状态码的类型。</p>
 <p>1xx：信息类，web请求正在进一步处理；</p>
 <p>2xx：200表示返回成功；</p>
 <p>3xx：304表示已经缓存请求；</p>
 <p>4xx：404表示访问的页面不存在；</p>
 <p>5xx：表示服务器错误。</p>
-<p>#ajax优缺点</p>
-<h2 id="ajax优点"><a href="#ajax优点" class="headerlink" title="ajax优点"></a>ajax优点</h2><p>Ajax的给我们带来的好处大家基本上都深有体会，在这里我只简单的讲几点：</p>
+<h2 id="ajax优缺点"><a href="#ajax优缺点" class="headerlink" title="ajax优缺点"></a>ajax优缺点</h2><h2 id="ajax优点"><a href="#ajax优点" class="headerlink" title="ajax优点"></a>ajax优点</h2><p>Ajax的给我们带来的好处大家基本上都深有体会，在这里我只简单的讲几点：</p>
 <p>1、最大的一点是页面无刷新，在页面内与服务器通信，给用户的体验非常好。</p>
 <p>2、使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。</p>
 <p>3、可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。</p>
