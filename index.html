@@ -205,87 +205,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-php-学习日记2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/03/php-学习日记2/" class="article-date">
-  	<time datetime="2016-12-03T11:35:37.000Z" itemprop="datePublished">2016-12-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/03/php-学习日记2/">
-        php-学习日记2
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><p>—&gt; 用于完成各种运算</p>
-<p>$a+$b  + : 加法运算符<br>$a-$b  - : 减法运算符<br>$a<em>$b  </em> : 乘法运算符<br>$a/$b  / : 除法运算符<br>$a%$b  % : 取模运算符</p>
-<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>—&gt; 将一个数据值赋给一个变量</p>
-<p>$a +=5;  &lt;加法赋值&gt;  $a = $a+5;<br>$a -=5;  &lt;减法赋值&gt;  $a = $a-5;<br>$a <em>=5;  &lt;乘法赋值&gt;  $a = $a</em>5;<br>$a /=5;  &lt;除法赋值&gt;  $a = $a/5;<br>$a .=5;  &lt;拼接赋值&gt;  $a = $a.5;</p>
-<h2 id="字符串运算"><a href="#字符串运算" class="headerlink" title="字符串运算"></a>字符串运算</h2><p>—&gt; 用于拼接字符串</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$a</span> = <span class="string">'hello'</span>;</div><div class="line"><span class="variable">$b</span> = <span class="variable">$a</span>.<span class="string">'world'</span>;  //表示拼接前后两个字符串</div><div class="line"></div><div class="line"><span class="variable">$c</span> = <span class="string">'hello'</span>;</div><div class="line"><span class="variable">$c</span> .= <span class="string">'world'</span>;</div></pre></td></tr></table></figure>
-<h2 id="递增、递减运算符"><a href="#递增、递减运算符" class="headerlink" title="递增、递减运算符"></a>递增、递减运算符</h2><p>—&gt;将当前值加1或减1</p>
-<p>++$i  $i先加1，再返回$i的值<br>$i++  先返回$i的值，在加1<br>–$i  $i先减1，再返回$i的值<br>$i–  先返回$i的值，在减1</p>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>—&gt;对多个变量值判断</p>
-<p>&amp;&amp;，and   逻辑与<br>||,or     逻辑或<br>！        逻辑非<br>xor       异或（有且仅有一个为true，则返回true）</p>
-<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><p>—&gt; 语法 ：a? b : c</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$a</span> = 5;</div><div class="line"><span class="variable">$b</span> = 1;</div><div class="line"><span class="variable">$res</span> = <span class="variable">$a</span>&lt;<span class="variable">$b</span> ? <span class="literal">true</span> : <span class="literal">false</span> ;</div></pre></td></tr></table></figure>
-<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="判断语句-if语句"><a href="#判断语句-if语句" class="headerlink" title="判断语句 if语句"></a>判断语句 if语句</h3><p>if语句括号中的表达式值为true 或 false，来控制是否执行指定的代码程序</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="variable">$a</span>)&#123;</div><div class="line">	//</div><div class="line">&#125;<span class="keyword">else</span> <span class="function"><span class="title">if</span></span>()&#123;</div><div class="line">	//</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	//</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a>switch 语句</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">switch(表达式)&#123;</div><div class="line">	<span class="keyword">case</span> value: </div><div class="line">		<span class="built_in">break</span>;  //跳出循环</div><div class="line">	default: //statements	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>—&gt; 语法： while(表达式){ //}</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$count</span> = 1;</div><div class="line"><span class="keyword">while</span>(<span class="variable">$count</span> &lt; 5)&#123;</div><div class="line">	<span class="built_in">echo</span> <span class="variable">$count</span>;</div><div class="line">	<span class="variable">$count</span> ++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>—&gt; do{//} while(表达式)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$count</span> = 11;</div><div class="line"><span class="keyword">do</span>&#123;</div><div class="line">	<span class="built_in">echo</span> <span class="variable">$count</span> -=3;</div><div class="line">	<span class="variable">$count</span> --;</div><div class="line">&#125;<span class="keyword">while</span>(<span class="variable">$count</span> &lt; 2)</div></pre></td></tr></table></figure>
-<p>—&gt; for循环</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(表达式1;表达式2;表达式3)&#123;</div><div class="line">	//</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="foreach-循环"><a href="#foreach-循环" class="headerlink" title="foreach 循环"></a>foreach 循环</h3><p>—&gt; 用来便历数组，每次循环都将指针后移一位</p>
-<p>语法 ： foreach($count as $key =&gt; $value){<br>    //<br>}</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/php/">php</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
     <article id="post-JavaScript面向对象与原型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -599,6 +518,68 @@
       
         <p class="article-more-link">
           <a  href="/2016/11/12/基于nodeJs的登录注册/#more">more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-php-学习日记2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/03/php-学习日记2/" class="article-date">
+  	<time datetime="2016-11-03T11:35:37.000Z" itemprop="datePublished">2016-11-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/03/php-学习日记2/">
+        php-学习日记2
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/php/">php</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2016/11/03/php-学习日记2/#more">more >></a>
         </p>
       
     
