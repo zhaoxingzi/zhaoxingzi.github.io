@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="data.js"></script>
+</head>
+<body>
+	<div class="shopCar">
+		<div class="control">
+			<input type="checkbox" value="" id="all">
+			<label for="all">全选</label>
+			<input type="button" value="按价格⬆️">
+		</div>
+		<div class="list">
+			<h3>商品</h3>
+			<h3>购买数量</h3>
+			<h3>单价</h3>
+			<h3>小计</h3>
+			<h3>操作</h3>
+		</div>
+		<ul>
+			<li>
+				<input type="checkbox">
+				<h3>摩奥套装</h3>
+				<div class="shuzhi">
+					<input class="minus" value="-">
+					<input type="text" num="" value="1">
+					<input class="add" value="+">
+				</div>
+				<span>￥：<i>99.00</i></span>
+				<input type="text" class="xiaoji" >
+				<div class="shanchu">
+					<a href="javascript:void(0)">删除</a>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox">
+				<h3>火锅底料</h3>
+				<div class="shuzhi">
+					<input class="minus" value="-">
+					<input type="text" num="" value="1">
+					<input class="add" value="+">
+				</div>
+				<span>￥：<i>56.00</i></span>
+				<input type="text" class="xiaoji" >
+				<div class="shanchu ">
+					<a href="javascript:void(0)">删除</a>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox">
+				<h3>沐浴露</h3>
+				<div class="shuzhi">
+					<input class="minus" value="-">
+					<input type="text" num="" value="1">
+					<input class="add" value="+">
+				</div>
+				<span>￥：<i>74.50</i></span>
+				<input type="text" class="xiaoji" >
+				<div class="shanchu ">
+					<a href="javascript:void(0)">删除</a>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox">
+				<h3>坚果</h3>
+				<div class="shuzhi">
+					<input class="minus" value="-">
+					<input type="text" num="" value="1">
+					<input class="add" value="+">
+				</div>
+				<span>￥：<i>23.00</i></span>
+				<input type="text" class="xiaoji">
+				<div class="shanchu ">
+					<a href="javascript:void(0)">删除</a>
+				</div>
+			</li>
+		</ul>
+		<div class="last">
+	      <label for="allPrice">总计：</label>
+	      <input id="allPrice" type="text" value="0"> 
+	    </div>
+	</div>
+</body>
+	<script src="index.js"></script>
+</html>

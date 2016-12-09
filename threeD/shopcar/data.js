@@ -1,0 +1,19 @@
+var data={
+	item:[{
+		title:"摩奥套装",
+		price:99.00,
+		delete:"删除"
+	},{
+		title:"火锅底料",
+		price:56.00,
+		delete:"删除"
+	},{
+		title:"沐浴露",
+		price:74.50,
+		delete:"删除"
+	},{
+		title:"坚果",
+		price:23.00,
+		delete:"删除"
+	}]
+}

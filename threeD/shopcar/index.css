@@ -1,0 +1,130 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:20px;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style:none;
+}
+.shopCar{
+	margin-left:100px;
+}
+.control{
+	height:50px;
+	margin-bottom:20px;
+}
+.list{
+	width:900px;
+	height:50px;
+	background:red;
+}
+.list>h3{
+	width:165px;
+	display:inline-block;
+	text-align:center;
+	line-height:50px;
+}
+.list h3:nth-child(1){
+	margin-left:14px;
+}
+[type="button"]{
+	border:none;
+	height:50px;
+	width:250px;
+	border-radius:10px;
+	outline:none;
+	margin-left:50px;
+}
+ul li{
+	width:900px;
+	height:70px;
+	background:snow;
+	line-height:70px;
+	border-bottom:1px red solid;
+}
+li >input{
+	float:left;
+	margin-top:30px;
+}
+li h3{
+	width:165px;
+	float:left;
+	margin-left:20px;
+	text-align:center;
+}
+li .shuzhi{
+	width:165px;
+	height:70px;
+	float:left;
+	text-align:center;
+}
+li .shuzhi input:nth-child(1){
+	width:20px;
+	text-align:center;
+	background:lightgray;
+	border:none;
+}
+li .shuzhi input:nth-child(2){
+	width:40px;
+	text-align:center;
+}
+li .shuzhi input:nth-child(3){
+	width:20px;
+	text-align:center;
+	background:lightgray;
+	border:none;
+}
+li >span{
+	width:166px;
+	text-align:center;
+	float:left;
+}
+li .xiaoji {
+	width:165px;
+	float:left;
+	text-align:center;
+	outline:none;
+	border:none;
+}
+li .shanchu {
+	width:165px;
+	float:left;
+	text-align:center;
+}
+.last{
+	margin-left:500px;
+	margin-top:10px;
+}
+.last input{
+	width:150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*li > *{
+	display:inline-block;
+}
+li > div {
+	margin-left:100px;
+}
+li>div>input{
+	width:50px;
+	text-align:center;
+}
+li > span{
+	width:200px;
+	background:red;
+	margin-left:150px;
+}
