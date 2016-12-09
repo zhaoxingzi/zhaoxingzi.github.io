@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		.fangda{
+			width:650px;
+			height:468px;
+			position:relative;
+		}
+		.small{
+			width:650px;
+			height:468px;
+			position:relative;
+			left:0;
+			top:0;
+			cursor:move;
+			overflow:hidden;
+			border:2px solid red;
+		}
+		.small img{
+			border:none;
+			border:0;
+			width:650px;
+			height:468px;
+		}
+		.mask{
+			width:150px;
+			height:150px;
+			position:absolute;
+			background:rgba(255,0,0,0.3);
+			top:0;
+			left:0;
+			display:none;
+		}
+		.big{
+			width:650px;
+			height:468px;
+			position:absolute;
+			top:0;
+			left:660px;
+			border:2px solid red;
+			display:none;
+			overflow:hidden;
+		}
+		.big img {
+			border:none;
+			position:absolute;
+			border:0;
+			width:1300px;
+			height:936px;
+		}
+	</style>
+</head>
+<body>
+	<div class="fangda">
+		<div class="small">
+			<img src="xingkong.jpg">
+			<div class="mask"></div>
+		</div>
+		<div class="big">
+			<img src="xingkong.jpg">
+		</div>
+	</div>
+</body>
+	<script type="">
+		window.onload=function(){
+			var small = document.querySelector(".small");
+			var big = document.querySelector(".big");
+			var mask = document.querySelector(".mask");
+			var bigImg = document.querySelector(".big img");
+
+			small.onmouseover = function(){
+				mask.style.display="block";
+				big.style.display="block";
+			} 
+			small.onmouseout=function(){
+				mask.style.display="none";
+				big.style.display="none";
+			}
+
+			small.onmousemove = function(event){
+				var oEvent = event || window.event;
+				var x = oEvent.clientX;  //鼠标距离x轴的距离
+				var y = oEvent.clientY;  //鼠标距离y轴的距离
+				var left =x - mask.offsetWidth/2;
+				var top = y - mask.offsetHeight/2;
+				if(x <= mask.offsetWidth/2){
+					left = 0;
+				}
+				else if(x >= small.offsetWidth-mask.offsetWidth/2){
+					left = small.offsetWidth-mask.offsetWidth;
+				}
+				if(y <= mask.offsetHeight/2){
+					top=0;
+				}
+				else if(y >= small.offsetHeight - mask.offsetHeight/2){
+					top = small.offsetHeight - mask.offsetHeight;
+				}
+
+				mask.innerText = "x:"+x + ";y:"+y;
+				mask.style.left = left + "px";
+				mask.style.top = top + "px";
+
+				// 得到比例 ＝ 大图范围/小图范围
+				var newX = (bigImg.offsetWidth - big.offsetWidth)/(small.offsetWidth - mask.offsetWidth);
+				var newY = (bigImg.offsetHeight - big.offsetHeight)/(small.offsetHeight - mask.offsetHeight);
+				// 系数
+				bigImg.style.left = -left * newX + "px";
+				bigImg.style.top = -top * newY + "px";
+			}
+		}
+	</script>
+</html>

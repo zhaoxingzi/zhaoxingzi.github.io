@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>offsetHeight、clientHeight、scrollHeight | zxz&amp;&amp;hsm</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天简单介绍介绍一下+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="offsetHeight、clientHeight、scrollHeight">
+<meta property="og:url" content="http://yoursite.com/2016/09/08/offsetHeight、clientHeight、scrollHeight/index.html">
+<meta property="og:site_name" content="zxz&&hsm">
+<meta property="og:description" content="今天简单介绍介绍一下+">
+<meta property="og:updated_time" content="2016-12-09T08:12:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="offsetHeight、clientHeight、scrollHeight">
+<meta name="twitter:description" content="今天简单介绍介绍一下+">
+  
+    <link rel="alternative" href="/atom.xml" title="zxz&amp;&amp;hsm" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">KiKi</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">你在桥上看风景，看风景的人在桥下看你！！！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/show/index2.html">我的项目</a></li>
+				        
+							<li><a href="/archives">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qpiZmpqSm5yak5nq29uEycXH" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="#" title="qq">qq</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/6020139279?refer_flag=1005050005_&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS-基本知识/" style="font-size: 10px;">CSS 基本知识</a> <a href="/tags/float/" style="font-size: 10px;">float</a> <a href="/tags/html-css/" style="font-size: 10px;">html css</a> <a href="/tags/jpages/" style="font-size: 10px;">jpages</a> <a href="/tags/web前端/" style="font-size: 10px;">web前端</a> <a href="/tags/动画/" style="font-size: 10px;">动画</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/选择器/" style="font-size: 10px;">选择器</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://lidaolin.github.io">霖霖霖</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zhoushujuan.github.io">周书娟</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更想找个男朋友</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">KiKi</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">KiKi</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">你在桥上看风景，看风景的人在桥下看你！！！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/show/index2.html">我的项目</a></li>
+		        
+					<li><a href="/archives">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhaoxingzi" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=qpiZmpqSm5yak5nq29uEycXH" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="#" title="qq">qq</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/6020139279?refer_flag=1005050005_&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-offsetHeight、clientHeight、scrollHeight" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/08/offsetHeight、clientHeight、scrollHeight/" class="article-date">
+  	<time datetime="2016-09-08T06:47:55.000Z" itemprop="datePublished">2016-09-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      offsetHeight、clientHeight、scrollHeight
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/offset-client-scroll/">offset client scroll</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="今天简单介绍介绍一下"><a href="#今天简单介绍介绍一下" class="headerlink" title="今天简单介绍介绍一下"></a>今天简单介绍介绍一下</h2><p>+<a id="more"></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">* scrollHeight: 获取对象的滚动高度。 </div><div class="line">* scrollLeft:元素的横向滚动条移动的距离 可以读取 可以修改</div><div class="line">* scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 可以读取 可以修改</div><div class="line">* scrollWidth:获取对象的滚动宽度 </div><div class="line">* offsetHeight:获取对象相对于版面或由父坐标，如果内容没有超出,相当于clientHeight</div><div class="line">* offsetParent 属性指定的父坐标的高度 </div><div class="line">* offsetLeft:返回元素与offsetParent的横向距离，找到元素的左偏移量，偏移量的参考对象是offsetParent的值</div><div class="line">* offsetParent: 返回距离元素最近设置position，非static样式的元素节点，没有的话，返回body节点。可以读取,可以修改</div><div class="line">* offsetTop 属性指定的父坐标的计算顶端位置 </div><div class="line">* innerWidth ：浏览器窗口宽度 (只读)</div><div class="line">* innerHeight ：浏览器窗口高度 (只读)</div><div class="line">* offsetWidth : 等于 width + padding + border (只读)</div><div class="line">* offsetHeight :等于 height + padding + border (只读)</div><div class="line">* clientWidth : 等于 width + padding (只读)</div><div class="line">* clientHeight : 等于 height + padding (只读)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">* event.clientX 相对文档的水平座标 </div><div class="line">* event.clientY 相对文档的垂直座标 </div><div class="line">* event.offsetX 相对容器的水平坐标 </div><div class="line">* event.offsetY 相对容器的垂直坐标 </div><div class="line">* document.documentElement.scrollTop 垂直方向滚动的值 </div><div class="line">* event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">* 页可见区域宽： document.body.clientWidth;</div><div class="line">* 网页可见区域高： document.body.clientHeight;</div><div class="line">* 网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</div><div class="line">* 网页可见区域高： document.body.offsetHeight （包含边线的宽）;</div><div class="line">* 网页正文全文宽： document.body.scrollWidth;</div><div class="line">* 网页正文全文高： document.body.scrollHeight;</div><div class="line">* 网页被卷去的高： document.body.scrollTop;</div><div class="line">* 网页被卷去的左： document.body.scrollLeft;</div><div class="line">* 网页正文项目组上： window.screenTop;</div><div class="line">* 网页正文项目组左： window.screenLeft;</div><div class="line">* 屏幕辨别率的高： window.screen.height;</div><div class="line">* 屏幕辨别率的宽： window.screen.width;</div><div class="line">* 屏幕可用工作区高度： window.screen.availHeight;</div></pre></td></tr></table></figure>
+<h2 id="the-end"><a href="#the-end" class="headerlink" title="the end"></a>the end</h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/10/放大镜/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          放大镜
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/04/购物车小demo-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">购物车小demo</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="offsetHeight、clientHeight、scrollHeight" data-title="offsetHeight、clientHeight、scrollHeight" data-url="http://yoursite.com/2016/09/08/offsetHeight、clientHeight、scrollHeight/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 KiKi
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/winnerweb/hexo-Yilia-Smackdown" target="_blank">Yilia(Smackdown)</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
