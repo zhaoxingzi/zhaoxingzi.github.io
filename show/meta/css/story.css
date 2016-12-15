@@ -1,0 +1,390 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.top {
+  width: 100%; }
+  .top .top-center {
+    width: 1382px;
+    height: 255px;
+    margin: 0 auto; }
+    .top .top-center .topTitle {
+      height: 40px;
+      width: 1382px; }
+      .top .top-center .topTitle .vip {
+        font-size: 20.83px;
+        margin-left: 37px;
+        line-height: 40px;
+        float: left; }
+        .top .top-center .topTitle .vip a {
+          color: #666; }
+      .top .top-center .topTitle .sign {
+        font-size: 16.67px;
+        float: left;
+        line-height: 40px;
+        margin-left: 773px; }
+        .top .top-center .topTitle .sign span a {
+          color: #666; }
+        .top .top-center .topTitle .sign .register {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 10;
+          left: 0;
+          top: 0; }
+          .top .top-center .topTitle .sign .register .register-pages {
+            width: 602px;
+            height: 765px;
+            margin: 0 auto; }
+            .top .top-center .topTitle .sign .register .register-pages .register-page {
+              width: 602px;
+              height: 694px;
+              line-height: 20px;
+              background: #fff;
+              position: relative; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page h3 {
+                font-weight: normal;
+                font-size: 37.5px;
+                top: 120px;
+                left: 120px;
+                position: absolute;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page p {
+                text-align: center;
+                font-size: 18px;
+                position: relative;
+                top: 202px;
+                color: #666666; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page label {
+                position: relative;
+                top: 230px;
+                left: 41px; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page input {
+                position: relative;
+                top: 239px;
+                left: 41px;
+                border: 1px solid #e3e3e3;
+                width: 520px;
+                height: 40px;
+                outline: none; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .creat {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                top: 260px;
+                text-align: center;
+                line-height: 40px;
+                background: #c4a9b8; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .creat a {
+                  color: #fff; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .weibo {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                top: 282px;
+                text-align: center;
+                line-height: 40px;
+                background: #f1ead8; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .weibo img {
+                  position: absolute;
+                  top: 4px;
+                  left: 23px; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .weibo a {
+                  color: #000000; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .qq {
+                top: 300px;
+                background: none;
+                position: relative; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .qq img {
+                  position: absolute;
+                  top: -6px;
+                  left: 23px; }
+            .top .top-center .topTitle .sign .register .register-pages .register-bottom {
+              width: 602px;
+              height: 55px;
+              background: #000000;
+              text-align: center;
+              line-height: 55px;
+              margin-top: 16px; }
+              .top .top-center .topTitle .sign .register .register-pages .register-bottom a {
+                color: #fff; }
+          .top .top-center .topTitle .sign .register .message-pages {
+            display: none;
+            width: 596px;
+            height: 582px;
+            background: #fff;
+            margin-left: 539px;
+            margin-top: 120px;
+            line-height: 20px;
+            position: fixed; }
+            .top .top-center .topTitle .sign .register .message-pages .success {
+              width: 596px;
+              height: 110px;
+              text-align: center;
+              line-height: 110px;
+              font-size: 33.33px;
+              color: #a3a3a3; }
+            .top .top-center .topTitle .sign .register .message-pages .user {
+              width: 542px;
+              height: 275px;
+              margin: 0 auto;
+              margin-top: 68px; }
+              .top .top-center .topTitle .sign .register .message-pages .user label {
+                font-size: 20.83px;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .register .message-pages .user input {
+                outline: none;
+                width: 540px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                margin-bottom: 25px; }
+            .top .top-center .topTitle .sign .register .message-pages .loding {
+              width: 542px;
+              height: 42px;
+              background: #c4a9b8;
+              text-align: center;
+              line-height: 42px;
+              margin: 45px auto; }
+              .top .top-center .topTitle .sign .register .message-pages .loding a {
+                color: #fff; }
+        .top .top-center .topTitle .sign .locate {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 10;
+          left: 0;
+          top: 0; }
+          .top .top-center .topTitle .sign .locate .locate-pages {
+            width: 602px;
+            height: 765px;
+            margin: 0 auto; }
+            .top .top-center .topTitle .sign .locate .locate-pages .locate-page {
+              width: 602px;
+              height: 694px;
+              margin: 0 auto;
+              line-height: 20px;
+              background: #fff;
+              position: relative; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page p {
+                line-height: 105px;
+                font-size: 20.83px;
+                text-align: center; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page h2 {
+                font-size: 60.46px;
+                text-align: center; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                text-align: center;
+                line-height: 40px;
+                background: #f1ead8; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo img {
+                  position: absolute;
+                  top: 4px;
+                  left: 23px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo a {
+                  color: #000000; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .qq {
+                top: 20px;
+                background: none;
+                position: relative; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .qq img {
+                  position: absolute;
+                  top: -6px;
+                  left: 23px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .or {
+                margin-top: 20px;
+                text-align: center;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang {
+                width: 522px;
+                height: 162px;
+                margin: -30px auto; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang label {
+                  font-size: 20.83px;
+                  color: #a3a3a3; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang input {
+                  outline: none;
+                  width: 520px;
+                  height: 40px;
+                  border: 1px solid #e3e3e3;
+                  margin-bottom: 25px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .loding {
+                width: 522px;
+                height: 42px;
+                margin: 0 auto;
+                background: #c4a9b8;
+                text-align: center;
+                line-height: 42px;
+                margin-top: 45px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .loding a {
+                  color: #fff; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .quer {
+                height: 20px;
+                text-align: center;
+                margin-top: -20px;
+                font-size: 16px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .quer a {
+                  color: #a3a3a3; }
+            .top .top-center .topTitle .sign .locate .locate-pages .locate-bottom {
+              width: 602px;
+              height: 55px;
+              background: #000000;
+              text-align: center;
+              margin: 0 auto;
+              line-height: 55px;
+              margin-top: 16px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-bottom a {
+                color: #fff; }
+      .top .top-center .topTitle .bag {
+        font-size: 16.67px;
+        float: left;
+        line-height: 40px;
+        margin-left: 130px; }
+        .top .top-center .topTitle .bag a {
+          color: #666; }
+      .top .top-center .topTitle .image {
+        width: 34px;
+        margin-left: 48px;
+        float: left; }
+    .top .top-center .caption {
+      width: 240px;
+      height: 72px;
+      font-size: 90px;
+      margin: 0 auto;
+      padding-top: 66px; }
+      .top .top-center .caption span {
+        font-family: "[AgencyFB]";
+        margin-right: 40px; }
+    .top .top-center .topNav {
+      padding-top: 30px;
+      height: 50px;
+      width: 880px;
+      margin: 0 auto; }
+      .top .top-center .topNav li {
+        width: 220px;
+        height: 50px;
+        float: left;
+        line-height: 50px;
+        text-align: center; }
+        .top .top-center .topNav li a {
+          color: #aaaaaa; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.footer {
+  width: 100%;
+  margin-top: 200px;
+  border-top: 1px solid #b2b1b1; }
+  .footer .footer-center {
+    width: 1382px;
+    height: 246px;
+    margin: 0 auto; }
+    .footer .footer-center ul {
+      width: 172px;
+      float: left;
+      margin-top: 50px; }
+      .footer .footer-center ul li a {
+        line-height: 28px;
+        color: #808080;
+        font-size: 14px; }
+    .footer .footer-center .one {
+      margin-left: 476px; }
+
+.cap {
+  width: 100%;
+  position: relative;
+  z-index: -100; }
+  .cap .cap-center {
+    width: 1865px;
+    height: 1020px;
+    margin: 0 auto; }
+    .cap .cap-center img {
+      margin-top: -60px; }
+
+.scroll {
+  width: 100%;
+  margin-top: -400px;
+  overflow: hidden; }
+  .scroll .box {
+    height: 265px;
+    width: 100%;
+    min-width: 1680px;
+    position: relative;
+    overflow: hidden; }
+    .scroll .box ul {
+      width: 50%;
+      height: 265px;
+      float: left; }
+      .scroll .box ul li {
+        width: 25%;
+        height: 265px;
+        float: left; }
+        .scroll .box ul li img {
+          width: 100%; }

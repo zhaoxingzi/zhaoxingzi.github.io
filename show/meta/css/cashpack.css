@@ -1,0 +1,61 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.cashpack {
+  width: 100%;
+  margin-top: 5px; }
+  .cashpack .cashpack-center {
+    width: 1382px;
+    height: 535px;
+    margin: 0 auto; }
+    .cashpack .cashpack-center .cashpack-title {
+      text-align: center;
+      font-size: 25.39px;
+      color: #c1c1c1; }
+    .cashpack .cashpack-center ul {
+      padding-left: 65px;
+      padding-top: 50px; }
+      .cashpack .cashpack-center ul li {
+        float: left;
+        width: 406px;
+        height: 446px;
+        margin-right: 13px; }
+        .cashpack .cashpack-center ul li .lop {
+          position: relative; }
+          .cashpack .cashpack-center ul li .lop .end {
+            display: none; }
+          .cashpack .cashpack-center ul li .lop .shopcars {
+            width: 406px;
+            position: absolute;
+            top: -100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+            font-size: 20.83px;
+            display: none; }
+        .cashpack .cashpack-center ul li .price {
+          width: 406px;
+          text-align: center;
+          margin-top: 23px; }
+          .cashpack .cashpack-center ul li .price a {
+            color: #d1d1d1; }

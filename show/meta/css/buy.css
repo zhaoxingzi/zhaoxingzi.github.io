@@ -1,0 +1,475 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.top {
+  width: 100%; }
+  .top .top-center {
+    width: 1382px;
+    height: 255px;
+    margin: 0 auto; }
+    .top .top-center .topTitle {
+      height: 40px;
+      width: 1382px; }
+      .top .top-center .topTitle .vip {
+        font-size: 20.83px;
+        margin-left: 37px;
+        line-height: 40px;
+        float: left; }
+        .top .top-center .topTitle .vip a {
+          color: #666; }
+      .top .top-center .topTitle .sign {
+        font-size: 16.67px;
+        float: left;
+        line-height: 40px;
+        margin-left: 773px; }
+        .top .top-center .topTitle .sign span a {
+          color: #666; }
+        .top .top-center .topTitle .sign .register {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 10;
+          left: 0;
+          top: 0; }
+          .top .top-center .topTitle .sign .register .register-pages {
+            width: 602px;
+            height: 765px;
+            margin: 0 auto; }
+            .top .top-center .topTitle .sign .register .register-pages .register-page {
+              width: 602px;
+              height: 694px;
+              line-height: 20px;
+              background: #fff;
+              position: relative; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page h3 {
+                font-weight: normal;
+                font-size: 37.5px;
+                top: 120px;
+                left: 120px;
+                position: absolute;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page p {
+                text-align: center;
+                font-size: 18px;
+                position: relative;
+                top: 202px;
+                color: #666666; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page label {
+                position: relative;
+                top: 230px;
+                left: 41px; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page input {
+                position: relative;
+                top: 239px;
+                left: 41px;
+                border: 1px solid #e3e3e3;
+                width: 520px;
+                height: 40px;
+                outline: none; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .creat {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                top: 260px;
+                text-align: center;
+                line-height: 40px;
+                background: #c4a9b8; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .creat a {
+                  color: #fff; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .weibo {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                top: 282px;
+                text-align: center;
+                line-height: 40px;
+                background: #f1ead8; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .weibo img {
+                  position: absolute;
+                  top: 4px;
+                  left: 23px; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .weibo a {
+                  color: #000000; }
+              .top .top-center .topTitle .sign .register .register-pages .register-page .qq {
+                top: 300px;
+                background: none;
+                position: relative; }
+                .top .top-center .topTitle .sign .register .register-pages .register-page .qq img {
+                  position: absolute;
+                  top: -6px;
+                  left: 23px; }
+            .top .top-center .topTitle .sign .register .register-pages .register-bottom {
+              width: 602px;
+              height: 55px;
+              background: #000000;
+              text-align: center;
+              line-height: 55px;
+              margin-top: 16px; }
+              .top .top-center .topTitle .sign .register .register-pages .register-bottom a {
+                color: #fff; }
+          .top .top-center .topTitle .sign .register .message-pages {
+            display: none;
+            width: 596px;
+            height: 582px;
+            background: #fff;
+            margin-left: 539px;
+            margin-top: 120px;
+            line-height: 20px;
+            position: fixed; }
+            .top .top-center .topTitle .sign .register .message-pages .success {
+              width: 596px;
+              height: 110px;
+              text-align: center;
+              line-height: 110px;
+              font-size: 33.33px;
+              color: #a3a3a3; }
+            .top .top-center .topTitle .sign .register .message-pages .user {
+              width: 542px;
+              height: 275px;
+              margin: 0 auto;
+              margin-top: 68px; }
+              .top .top-center .topTitle .sign .register .message-pages .user label {
+                font-size: 20.83px;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .register .message-pages .user input {
+                outline: none;
+                width: 540px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                margin-bottom: 25px; }
+            .top .top-center .topTitle .sign .register .message-pages .loding {
+              width: 542px;
+              height: 42px;
+              background: #c4a9b8;
+              text-align: center;
+              line-height: 42px;
+              margin: 45px auto; }
+              .top .top-center .topTitle .sign .register .message-pages .loding a {
+                color: #fff; }
+        .top .top-center .topTitle .sign .locate {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 10;
+          left: 0;
+          top: 0; }
+          .top .top-center .topTitle .sign .locate .locate-pages {
+            width: 602px;
+            height: 765px;
+            margin: 0 auto; }
+            .top .top-center .topTitle .sign .locate .locate-pages .locate-page {
+              width: 602px;
+              height: 694px;
+              margin: 0 auto;
+              line-height: 20px;
+              background: #fff;
+              position: relative; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page p {
+                line-height: 105px;
+                font-size: 20.83px;
+                text-align: center; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page h2 {
+                font-size: 60.46px;
+                text-align: center; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo {
+                width: 520px;
+                height: 40px;
+                border: 1px solid #e3e3e3;
+                position: relative;
+                left: 41px;
+                text-align: center;
+                line-height: 40px;
+                background: #f1ead8; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo img {
+                  position: absolute;
+                  top: 4px;
+                  left: 23px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .weibo a {
+                  color: #000000; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .qq {
+                top: 20px;
+                background: none;
+                position: relative; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .qq img {
+                  position: absolute;
+                  top: -6px;
+                  left: 23px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .or {
+                margin-top: 20px;
+                text-align: center;
+                color: #a3a3a3; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang {
+                width: 522px;
+                height: 162px;
+                margin: -30px auto; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang label {
+                  font-size: 20.83px;
+                  color: #a3a3a3; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .youxiang input {
+                  outline: none;
+                  width: 520px;
+                  height: 40px;
+                  border: 1px solid #e3e3e3;
+                  margin-bottom: 25px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .loding {
+                width: 522px;
+                height: 42px;
+                margin: 0 auto;
+                background: #c4a9b8;
+                text-align: center;
+                line-height: 42px;
+                margin-top: 45px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .loding a {
+                  color: #fff; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-page .quer {
+                height: 20px;
+                text-align: center;
+                margin-top: -20px;
+                font-size: 16px; }
+                .top .top-center .topTitle .sign .locate .locate-pages .locate-page .quer a {
+                  color: #a3a3a3; }
+            .top .top-center .topTitle .sign .locate .locate-pages .locate-bottom {
+              width: 602px;
+              height: 55px;
+              background: #000000;
+              text-align: center;
+              margin: 0 auto;
+              line-height: 55px;
+              margin-top: 16px; }
+              .top .top-center .topTitle .sign .locate .locate-pages .locate-bottom a {
+                color: #fff; }
+      .top .top-center .topTitle .bag {
+        font-size: 16.67px;
+        float: left;
+        line-height: 40px;
+        margin-left: 130px; }
+        .top .top-center .topTitle .bag a {
+          color: #666; }
+      .top .top-center .topTitle .image {
+        width: 34px;
+        margin-left: 48px;
+        float: left; }
+    .top .top-center .caption {
+      width: 240px;
+      height: 72px;
+      font-size: 90px;
+      margin: 0 auto;
+      padding-top: 66px; }
+      .top .top-center .caption span {
+        font-family: "[AgencyFB]";
+        margin-right: 40px; }
+    .top .top-center .topNav {
+      padding-top: 30px;
+      height: 50px;
+      width: 880px;
+      margin: 0 auto; }
+      .top .top-center .topNav li {
+        width: 220px;
+        height: 50px;
+        float: left;
+        line-height: 50px;
+        text-align: center; }
+        .top .top-center .topNav li a {
+          color: #aaaaaa; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.detail {
+  width: 100%;
+  margin-top: 80px; }
+  .detail .detail-center {
+    width: 1275px;
+    height: 576px;
+    margin: 0 auto; }
+    .detail .detail-center .left {
+      width: 590px;
+      height: 576px;
+      position: relative; }
+      .detail .detail-center .left .small {
+        width: 590px;
+        height: 576px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: move;
+        overflow: hidden; }
+        .detail .detail-center .left .small img {
+          border: none;
+          border: 0;
+          width: 590px;
+          height: 576px; }
+        .detail .detail-center .left .small .mask {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          background: rgba(255, 0, 0, 0.3);
+          top: 0;
+          left: 0;
+          display: none; }
+      .detail .detail-center .left .big {
+        width: 590px;
+        height: 576px;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 590px;
+        display: none;
+        overflow: hidden; }
+        .detail .detail-center .left .big img {
+          border: none;
+          position: absolute;
+          border: 0;
+          width: 1180px;
+          height: 1152px; }
+      .detail .detail-center .left ul {
+        width: 103px;
+        margin-left: 611px;
+        height: 576px; }
+        .detail .detail-center .left ul li {
+          width: 103px;
+          height: 102px;
+          margin-bottom: 20px; }
+        .detail .detail-center .left ul li:nth-child(4) {
+          margin-bottom: 5px; }
+    .detail .detail-center .right {
+      width: 443px;
+      height: 576px;
+      position: relative;
+      top: -576px;
+      left: 831px; }
+      .detail .detail-center .right .p {
+        font-size: 37.5px;
+        text-align: center;
+        line-height: 60px;
+        color: #939292; }
+      .detail .detail-center .right .money {
+        font-size: 26px;
+        text-align: center;
+        line-height: 43px;
+        color: #777676; }
+      .detail .detail-center .right .linshou {
+        text-align: center;
+        line-height: 50px; }
+        .detail .detail-center .right .linshou a {
+          text-decoration: underline;
+          color: #a09f9f; }
+      .detail .detail-center .right .colors {
+        margin-top: 92px;
+        line-height: 54px;
+        text-align: center;
+        font-size: 20.83px;
+        color: #9f9f9f; }
+      .detail .detail-center .right .italy {
+        width: 268px;
+        height: 80px;
+        border: 1px solid #dadada;
+        margin: 0 auto; }
+      .detail .detail-center .right .shopbag {
+        width: 266px;
+        height: 68px;
+        text-align: center;
+        line-height: 68px;
+        background: #9d6f89;
+        margin: 34px auto; }
+        .detail .detail-center .right .shopbag a {
+          color: #fff;
+          font-size: 20.83px; }
+      .detail .detail-center .right .bottom {
+        text-align: center;
+        font-size: 20.83px;
+        color: #d4d4d4; }
+  .detail .pho {
+    width: 1318px;
+    margin: 0 auto;
+    margin-top: 30px; }
+  .detail .from {
+    width: 1375px;
+    margin: 0 auto;
+    margin-top: 30px; }
+  .detail .transparent {
+    width: 1314px;
+    margin: 0 auto;
+    margin-top: 30px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.footer {
+  width: 100%;
+  margin-top: 200px;
+  border-top: 1px solid #b2b1b1; }
+  .footer .footer-center {
+    width: 1382px;
+    height: 246px;
+    margin: 0 auto; }
+    .footer .footer-center ul {
+      width: 172px;
+      float: left;
+      margin-top: 50px; }
+      .footer .footer-center ul li a {
+        line-height: 28px;
+        color: #808080;
+        font-size: 14px; }
+    .footer .footer-center .one {
+      margin-left: 476px; }

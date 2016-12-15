@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.footer {
+  width: 100%;
+  margin-top: 200px;
+  border-top: 1px solid #b2b1b1; }
+  .footer .footer-center {
+    width: 1382px;
+    height: 246px;
+    margin: 0 auto; }
+    .footer .footer-center ul {
+      width: 172px;
+      float: left;
+      margin-top: 50px; }
+      .footer .footer-center ul li a {
+        line-height: 28px;
+        color: #808080;
+        font-size: 14px; }
+    .footer .footer-center .one {
+      margin-left: 476px; }

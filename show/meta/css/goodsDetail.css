@@ -1,0 +1,137 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.detail {
+  width: 100%;
+  margin-top: 80px; }
+  .detail .detail-center {
+    width: 1275px;
+    height: 576px;
+    margin: 0 auto; }
+    .detail .detail-center .left {
+      width: 590px;
+      height: 576px;
+      position: relative; }
+      .detail .detail-center .left .small {
+        width: 590px;
+        height: 576px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: move;
+        overflow: hidden; }
+        .detail .detail-center .left .small img {
+          border: none;
+          border: 0;
+          width: 590px;
+          height: 576px; }
+        .detail .detail-center .left .small .mask {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          background: rgba(255, 0, 0, 0.3);
+          top: 0;
+          left: 0;
+          display: none; }
+      .detail .detail-center .left .big {
+        width: 590px;
+        height: 576px;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 590px;
+        display: none;
+        overflow: hidden; }
+        .detail .detail-center .left .big img {
+          border: none;
+          position: absolute;
+          border: 0;
+          width: 1180px;
+          height: 1152px; }
+      .detail .detail-center .left ul {
+        width: 103px;
+        margin-left: 611px;
+        height: 576px; }
+        .detail .detail-center .left ul li {
+          width: 103px;
+          height: 102px;
+          margin-bottom: 20px; }
+        .detail .detail-center .left ul li:nth-child(4) {
+          margin-bottom: 5px; }
+    .detail .detail-center .right {
+      width: 443px;
+      height: 576px;
+      position: relative;
+      top: -576px;
+      left: 831px; }
+      .detail .detail-center .right .p {
+        font-size: 37.5px;
+        text-align: center;
+        line-height: 60px;
+        color: #939292; }
+      .detail .detail-center .right .money {
+        font-size: 26px;
+        text-align: center;
+        line-height: 43px;
+        color: #777676; }
+      .detail .detail-center .right .linshou {
+        text-align: center;
+        line-height: 50px; }
+        .detail .detail-center .right .linshou a {
+          text-decoration: underline;
+          color: #a09f9f; }
+      .detail .detail-center .right .colors {
+        margin-top: 92px;
+        line-height: 54px;
+        text-align: center;
+        font-size: 20.83px;
+        color: #9f9f9f; }
+      .detail .detail-center .right .italy {
+        width: 268px;
+        height: 80px;
+        border: 1px solid #dadada;
+        margin: 0 auto; }
+      .detail .detail-center .right .shopbag {
+        width: 266px;
+        height: 68px;
+        text-align: center;
+        line-height: 68px;
+        background: #9d6f89;
+        margin: 34px auto; }
+        .detail .detail-center .right .shopbag a {
+          color: #fff;
+          font-size: 20.83px; }
+      .detail .detail-center .right .bottom {
+        text-align: center;
+        font-size: 20.83px;
+        color: #d4d4d4; }
+  .detail .pho {
+    width: 1318px;
+    margin: 0 auto;
+    margin-top: 30px; }
+  .detail .from {
+    width: 1375px;
+    margin: 0 auto;
+    margin-top: 30px; }
+  .detail .transparent {
+    width: 1314px;
+    margin: 0 auto;
+    margin-top: 30px; }

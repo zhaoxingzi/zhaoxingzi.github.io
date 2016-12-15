@@ -1,0 +1,62 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "华文仿宋"; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+.backpack {
+  width: 100%;
+  margin-top: 136px; }
+  .backpack .backpack-center {
+    width: 1382px;
+    height: 1163px;
+    margin: 0 auto; }
+    .backpack .backpack-center .backpack-title {
+      text-align: center;
+      font-size: 25.39px;
+      color: #c1c1c1; }
+    .backpack .backpack-center ul {
+      padding-left: 65px;
+      padding-top: 50px; }
+      .backpack .backpack-center ul li {
+        float: left;
+        width: 406px;
+        height: 446px;
+        margin-right: 13px;
+        padding-bottom: 100px; }
+        .backpack .backpack-center ul li .lop {
+          position: relative; }
+          .backpack .backpack-center ul li .lop .end {
+            display: none; }
+          .backpack .backpack-center ul li .lop .shopcars {
+            width: 406px;
+            position: absolute;
+            height: 100px;
+            top: -100px;
+            text-align: center;
+            line-height: 100px;
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+            font-size: 20.83px;
+            display: none; }
+        .backpack .backpack-center ul li .price {
+          width: 406px;
+          text-align: center;
+          margin-top: 23px; }
+          .backpack .backpack-center ul li .price a {
+            color: #d1d1d1; }
